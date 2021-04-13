@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -26,14 +27,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+  bool isArabic = false;
+  final CollectionReference c = FirebaseFirestore.instance.collection('test');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,15 +42,16 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               AppLocalizations.of(context).counter,
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          c
+              .add({'app': 'isworking'})
+              .then((value) => print('user added'))
+              .catchError((e) => print('error is $e'));
+        },
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
