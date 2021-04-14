@@ -1,4 +1,7 @@
-part of 'auth_bloc.dart';
+part of'auth_bloc.dart';
 
-@immutable
-abstract class AuthEvent {}
+@freezed
+abstract class AuthEvent with _$AuthEvent{
+  factory AuthEvent.emailChanged()=EmailChanged;
+
+}
