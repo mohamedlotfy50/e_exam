@@ -12,6 +12,10 @@ class Password {
   factory Password(String password) {
     return Password._(_passwordValidator(password));
   }
+
+  bool isEqual(Password obj) {
+    return _value == obj._value;
+  }
 }
 
 Either<FailureMessage, String> _passwordValidator(String password) {
