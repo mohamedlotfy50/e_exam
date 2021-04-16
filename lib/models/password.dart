@@ -13,8 +13,11 @@ class Password {
     return Password._(_passwordValidator(password));
   }
 
-  bool isEqual(Password obj) {
-    return _value == obj._value;
+  String isEqual(Password obj) {
+    if (_value == obj._value) {
+      return 'password does not match';
+    }
+    return null;
   }
 }
 

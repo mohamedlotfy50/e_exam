@@ -2,7 +2,10 @@ import 'package:e_exam/firbase_wrapper.dart';
 import 'package:e_exam/prsentation/screens/auth/auth_wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'blocs/auth/bloc/auth_bloc.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -19,7 +22,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: FirebaseWrapper(
-        widget: AuthWrapper(),
+        widget: BlocProvider(
+          create: (context) => AuthBloc(),
+          child: AuthWrapper(),
+        ),
       ),
     );
   }

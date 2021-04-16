@@ -68,6 +68,16 @@ class _$AuthEventTearOff {
       passwordConfig,
     );
   }
+
+// ignore: unused_element
+  SignIn signIn() {
+    return const SignIn();
+  }
+
+// ignore: unused_element
+  ToDefault toDefault() {
+    return const ToDefault();
+  }
 }
 
 /// @nodoc
@@ -86,6 +96,8 @@ mixin _$AuthEvent {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -97,6 +109,8 @@ mixin _$AuthEvent {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -109,6 +123,8 @@ mixin _$AuthEvent {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -120,6 +136,8 @@ mixin _$AuthEvent {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
     @required TResult orElse(),
   });
 }
@@ -168,15 +186,23 @@ class _$NameChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$NameChanged implements NameChanged {
-  _$NameChanged(this.name) : assert(name != null);
+class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
+  const _$NameChanged(this.name) : assert(name != null);
 
   @override
   final String name;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.nameChanged(name: $name)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.nameChanged'))
+      ..add(DiagnosticsProperty('name', name));
   }
 
   @override
@@ -207,6 +233,8 @@ class _$NameChanged implements NameChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -216,6 +244,8 @@ class _$NameChanged implements NameChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return nameChanged(name);
   }
 
@@ -230,6 +260,8 @@ class _$NameChanged implements NameChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -250,6 +282,8 @@ class _$NameChanged implements NameChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -259,6 +293,8 @@ class _$NameChanged implements NameChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return nameChanged(this);
   }
 
@@ -273,6 +309,8 @@ class _$NameChanged implements NameChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -284,7 +322,7 @@ class _$NameChanged implements NameChanged {
 }
 
 abstract class NameChanged implements AuthEvent {
-  factory NameChanged(String name) = _$NameChanged;
+  const factory NameChanged(String name) = _$NameChanged;
 
   String get name;
   @JsonKey(ignore: true)
@@ -320,15 +358,23 @@ class _$EmailChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$EmailChanged implements EmailChanged {
-  _$EmailChanged(this.email) : assert(email != null);
+class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
+  const _$EmailChanged(this.email) : assert(email != null);
 
   @override
   final String email;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.emailChanged(email: $email)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.emailChanged'))
+      ..add(DiagnosticsProperty('email', email));
   }
 
   @override
@@ -359,6 +405,8 @@ class _$EmailChanged implements EmailChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -368,6 +416,8 @@ class _$EmailChanged implements EmailChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return emailChanged(email);
   }
 
@@ -382,6 +432,8 @@ class _$EmailChanged implements EmailChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -402,6 +454,8 @@ class _$EmailChanged implements EmailChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -411,6 +465,8 @@ class _$EmailChanged implements EmailChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return emailChanged(this);
   }
 
@@ -425,6 +481,8 @@ class _$EmailChanged implements EmailChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -436,7 +494,7 @@ class _$EmailChanged implements EmailChanged {
 }
 
 abstract class EmailChanged implements AuthEvent {
-  factory EmailChanged(String email) = _$EmailChanged;
+  const factory EmailChanged(String email) = _$EmailChanged;
 
   String get email;
   @JsonKey(ignore: true)
@@ -472,15 +530,25 @@ class _$CollageIDChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$CollageIDChanged implements CollageIDChanged {
-  _$CollageIDChanged(this.id) : assert(id != null);
+class _$CollageIDChanged
+    with DiagnosticableTreeMixin
+    implements CollageIDChanged {
+  const _$CollageIDChanged(this.id) : assert(id != null);
 
   @override
   final String id;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.collageIDChanged(id: $id)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.collageIDChanged'))
+      ..add(DiagnosticsProperty('id', id));
   }
 
   @override
@@ -511,6 +579,8 @@ class _$CollageIDChanged implements CollageIDChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -520,6 +590,8 @@ class _$CollageIDChanged implements CollageIDChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return collageIDChanged(id);
   }
 
@@ -534,6 +606,8 @@ class _$CollageIDChanged implements CollageIDChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -554,6 +628,8 @@ class _$CollageIDChanged implements CollageIDChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -563,6 +639,8 @@ class _$CollageIDChanged implements CollageIDChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return collageIDChanged(this);
   }
 
@@ -577,6 +655,8 @@ class _$CollageIDChanged implements CollageIDChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -588,7 +668,7 @@ class _$CollageIDChanged implements CollageIDChanged {
 }
 
 abstract class CollageIDChanged implements AuthEvent {
-  factory CollageIDChanged(String id) = _$CollageIDChanged;
+  const factory CollageIDChanged(String id) = _$CollageIDChanged;
 
   String get id;
   @JsonKey(ignore: true)
@@ -624,15 +704,25 @@ class _$UserRoleChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$UserRoleChanged implements UserRoleChanged {
-  _$UserRoleChanged(this.role) : assert(role != null);
+class _$UserRoleChanged
+    with DiagnosticableTreeMixin
+    implements UserRoleChanged {
+  const _$UserRoleChanged(this.role) : assert(role != null);
 
   @override
   final String role;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.userRoleChanged(role: $role)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.userRoleChanged'))
+      ..add(DiagnosticsProperty('role', role));
   }
 
   @override
@@ -663,6 +753,8 @@ class _$UserRoleChanged implements UserRoleChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -672,6 +764,8 @@ class _$UserRoleChanged implements UserRoleChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return userRoleChanged(role);
   }
 
@@ -686,6 +780,8 @@ class _$UserRoleChanged implements UserRoleChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -706,6 +802,8 @@ class _$UserRoleChanged implements UserRoleChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -715,6 +813,8 @@ class _$UserRoleChanged implements UserRoleChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return userRoleChanged(this);
   }
 
@@ -729,6 +829,8 @@ class _$UserRoleChanged implements UserRoleChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -740,7 +842,7 @@ class _$UserRoleChanged implements UserRoleChanged {
 }
 
 abstract class UserRoleChanged implements AuthEvent {
-  factory UserRoleChanged(String role) = _$UserRoleChanged;
+  const factory UserRoleChanged(String role) = _$UserRoleChanged;
 
   String get role;
   @JsonKey(ignore: true)
@@ -777,15 +879,25 @@ class _$DepartmentChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$DepartmentChanged implements DepartmentChanged {
-  _$DepartmentChanged(this.department) : assert(department != null);
+class _$DepartmentChanged
+    with DiagnosticableTreeMixin
+    implements DepartmentChanged {
+  const _$DepartmentChanged(this.department) : assert(department != null);
 
   @override
   final String department;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.departmentChanged(department: $department)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.departmentChanged'))
+      ..add(DiagnosticsProperty('department', department));
   }
 
   @override
@@ -817,6 +929,8 @@ class _$DepartmentChanged implements DepartmentChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -826,6 +940,8 @@ class _$DepartmentChanged implements DepartmentChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return departmentChanged(department);
   }
 
@@ -840,6 +956,8 @@ class _$DepartmentChanged implements DepartmentChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -860,6 +978,8 @@ class _$DepartmentChanged implements DepartmentChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -869,6 +989,8 @@ class _$DepartmentChanged implements DepartmentChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return departmentChanged(this);
   }
 
@@ -883,6 +1005,8 @@ class _$DepartmentChanged implements DepartmentChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -894,7 +1018,7 @@ class _$DepartmentChanged implements DepartmentChanged {
 }
 
 abstract class DepartmentChanged implements AuthEvent {
-  factory DepartmentChanged(String department) = _$DepartmentChanged;
+  const factory DepartmentChanged(String department) = _$DepartmentChanged;
 
   String get department;
   @JsonKey(ignore: true)
@@ -930,15 +1054,23 @@ class _$LevelChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$LevelChanged implements LevelChanged {
-  _$LevelChanged(this.level) : assert(level != null);
+class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
+  const _$LevelChanged(this.level) : assert(level != null);
 
   @override
   final String level;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.levelChanged(level: $level)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.levelChanged'))
+      ..add(DiagnosticsProperty('level', level));
   }
 
   @override
@@ -969,6 +1101,8 @@ class _$LevelChanged implements LevelChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -978,6 +1112,8 @@ class _$LevelChanged implements LevelChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return levelChanged(level);
   }
 
@@ -992,6 +1128,8 @@ class _$LevelChanged implements LevelChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1012,6 +1150,8 @@ class _$LevelChanged implements LevelChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -1021,6 +1161,8 @@ class _$LevelChanged implements LevelChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return levelChanged(this);
   }
 
@@ -1035,6 +1177,8 @@ class _$LevelChanged implements LevelChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1046,7 +1190,7 @@ class _$LevelChanged implements LevelChanged {
 }
 
 abstract class LevelChanged implements AuthEvent {
-  factory LevelChanged(String level) = _$LevelChanged;
+  const factory LevelChanged(String level) = _$LevelChanged;
 
   String get level;
   @JsonKey(ignore: true)
@@ -1082,15 +1226,25 @@ class _$PasswordChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$PasswordChanged implements PasswordChanged {
-  _$PasswordChanged(this.password) : assert(password != null);
+class _$PasswordChanged
+    with DiagnosticableTreeMixin
+    implements PasswordChanged {
+  const _$PasswordChanged(this.password) : assert(password != null);
 
   @override
   final String password;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.passwordChanged(password: $password)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.passwordChanged'))
+      ..add(DiagnosticsProperty('password', password));
   }
 
   @override
@@ -1122,6 +1276,8 @@ class _$PasswordChanged implements PasswordChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -1131,6 +1287,8 @@ class _$PasswordChanged implements PasswordChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return passwordChanged(password);
   }
 
@@ -1145,6 +1303,8 @@ class _$PasswordChanged implements PasswordChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1165,6 +1325,8 @@ class _$PasswordChanged implements PasswordChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -1174,6 +1336,8 @@ class _$PasswordChanged implements PasswordChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return passwordChanged(this);
   }
 
@@ -1188,6 +1352,8 @@ class _$PasswordChanged implements PasswordChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1199,7 +1365,7 @@ class _$PasswordChanged implements PasswordChanged {
 }
 
 abstract class PasswordChanged implements AuthEvent {
-  factory PasswordChanged(String password) = _$PasswordChanged;
+  const factory PasswordChanged(String password) = _$PasswordChanged;
 
   String get password;
   @JsonKey(ignore: true)
@@ -1238,15 +1404,26 @@ class _$PasswordConfigChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$PasswordConfigChanged implements PasswordConfigChanged {
-  _$PasswordConfigChanged(this.passwordConfig) : assert(passwordConfig != null);
+class _$PasswordConfigChanged
+    with DiagnosticableTreeMixin
+    implements PasswordConfigChanged {
+  const _$PasswordConfigChanged(this.passwordConfig)
+      : assert(passwordConfig != null);
 
   @override
   final String passwordConfig;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.passwordConfigChanged(passwordConfig: $passwordConfig)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.passwordConfigChanged'))
+      ..add(DiagnosticsProperty('passwordConfig', passwordConfig));
   }
 
   @override
@@ -1280,6 +1457,8 @@ class _$PasswordConfigChanged implements PasswordConfigChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -1289,6 +1468,8 @@ class _$PasswordConfigChanged implements PasswordConfigChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return passwordConfigChanged(passwordConfig);
   }
 
@@ -1303,6 +1484,8 @@ class _$PasswordConfigChanged implements PasswordConfigChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1323,6 +1506,8 @@ class _$PasswordConfigChanged implements PasswordConfigChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
@@ -1332,6 +1517,8 @@ class _$PasswordConfigChanged implements PasswordConfigChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
     return passwordConfigChanged(this);
   }
 
@@ -1346,6 +1533,8 @@ class _$PasswordConfigChanged implements PasswordConfigChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1357,7 +1546,7 @@ class _$PasswordConfigChanged implements PasswordConfigChanged {
 }
 
 abstract class PasswordConfigChanged implements AuthEvent {
-  factory PasswordConfigChanged(String passwordConfig) =
+  const factory PasswordConfigChanged(String passwordConfig) =
       _$PasswordConfigChanged;
 
   String get passwordConfig;
@@ -1366,12 +1555,319 @@ abstract class PasswordConfigChanged implements AuthEvent {
 }
 
 /// @nodoc
+abstract class $SignInCopyWith<$Res> {
+  factory $SignInCopyWith(SignIn value, $Res Function(SignIn) then) =
+      _$SignInCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$SignInCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
+    implements $SignInCopyWith<$Res> {
+  _$SignInCopyWithImpl(SignIn _value, $Res Function(SignIn) _then)
+      : super(_value, (v) => _then(v as SignIn));
+
+  @override
+  SignIn get _value => super._value as SignIn;
+}
+
+/// @nodoc
+class _$SignIn with DiagnosticableTreeMixin implements SignIn {
+  const _$SignIn();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.signIn()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthEvent.signIn'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is SignIn);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult nameChanged(String name),
+    @required TResult emailChanged(String email),
+    @required TResult collageIDChanged(String id),
+    @required TResult userRoleChanged(String role),
+    @required TResult departmentChanged(String department),
+    @required TResult levelChanged(String level),
+    @required TResult passwordChanged(String password),
+    @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
+  }) {
+    assert(nameChanged != null);
+    assert(emailChanged != null);
+    assert(collageIDChanged != null);
+    assert(userRoleChanged != null);
+    assert(departmentChanged != null);
+    assert(levelChanged != null);
+    assert(passwordChanged != null);
+    assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
+    return signIn();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult nameChanged(String name),
+    TResult emailChanged(String email),
+    TResult collageIDChanged(String id),
+    TResult userRoleChanged(String role),
+    TResult departmentChanged(String department),
+    TResult levelChanged(String level),
+    TResult passwordChanged(String password),
+    TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (signIn != null) {
+      return signIn();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult userRoleChanged(UserRoleChanged value),
+    @required TResult departmentChanged(DepartmentChanged value),
+    @required TResult levelChanged(LevelChanged value),
+    @required TResult passwordChanged(PasswordChanged value),
+    @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
+  }) {
+    assert(nameChanged != null);
+    assert(emailChanged != null);
+    assert(collageIDChanged != null);
+    assert(userRoleChanged != null);
+    assert(departmentChanged != null);
+    assert(levelChanged != null);
+    assert(passwordChanged != null);
+    assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
+    return signIn(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult collageIDChanged(CollageIDChanged value),
+    TResult userRoleChanged(UserRoleChanged value),
+    TResult departmentChanged(DepartmentChanged value),
+    TResult levelChanged(LevelChanged value),
+    TResult passwordChanged(PasswordChanged value),
+    TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (signIn != null) {
+      return signIn(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignIn implements AuthEvent {
+  const factory SignIn() = _$SignIn;
+}
+
+/// @nodoc
+abstract class $ToDefaultCopyWith<$Res> {
+  factory $ToDefaultCopyWith(ToDefault value, $Res Function(ToDefault) then) =
+      _$ToDefaultCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ToDefaultCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
+    implements $ToDefaultCopyWith<$Res> {
+  _$ToDefaultCopyWithImpl(ToDefault _value, $Res Function(ToDefault) _then)
+      : super(_value, (v) => _then(v as ToDefault));
+
+  @override
+  ToDefault get _value => super._value as ToDefault;
+}
+
+/// @nodoc
+class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
+  const _$ToDefault();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.toDefault()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthEvent.toDefault'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is ToDefault);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult nameChanged(String name),
+    @required TResult emailChanged(String email),
+    @required TResult collageIDChanged(String id),
+    @required TResult userRoleChanged(String role),
+    @required TResult departmentChanged(String department),
+    @required TResult levelChanged(String level),
+    @required TResult passwordChanged(String password),
+    @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult signIn(),
+    @required TResult toDefault(),
+  }) {
+    assert(nameChanged != null);
+    assert(emailChanged != null);
+    assert(collageIDChanged != null);
+    assert(userRoleChanged != null);
+    assert(departmentChanged != null);
+    assert(levelChanged != null);
+    assert(passwordChanged != null);
+    assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
+    return toDefault();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult nameChanged(String name),
+    TResult emailChanged(String email),
+    TResult collageIDChanged(String id),
+    TResult userRoleChanged(String role),
+    TResult departmentChanged(String department),
+    TResult levelChanged(String level),
+    TResult passwordChanged(String password),
+    TResult passwordConfigChanged(String passwordConfig),
+    TResult signIn(),
+    TResult toDefault(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (toDefault != null) {
+      return toDefault();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult userRoleChanged(UserRoleChanged value),
+    @required TResult departmentChanged(DepartmentChanged value),
+    @required TResult levelChanged(LevelChanged value),
+    @required TResult passwordChanged(PasswordChanged value),
+    @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult signIn(SignIn value),
+    @required TResult toDefault(ToDefault value),
+  }) {
+    assert(nameChanged != null);
+    assert(emailChanged != null);
+    assert(collageIDChanged != null);
+    assert(userRoleChanged != null);
+    assert(departmentChanged != null);
+    assert(levelChanged != null);
+    assert(passwordChanged != null);
+    assert(passwordConfigChanged != null);
+    assert(signIn != null);
+    assert(toDefault != null);
+    return toDefault(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult collageIDChanged(CollageIDChanged value),
+    TResult userRoleChanged(UserRoleChanged value),
+    TResult departmentChanged(DepartmentChanged value),
+    TResult levelChanged(LevelChanged value),
+    TResult passwordChanged(PasswordChanged value),
+    TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult signIn(SignIn value),
+    TResult toDefault(ToDefault value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (toDefault != null) {
+      return toDefault(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ToDefault implements AuthEvent {
+  const factory ToDefault() = _$ToDefault;
+}
+
+/// @nodoc
 class _$AuthStateTearOff {
   const _$AuthStateTearOff();
 
 // ignore: unused_element
-  _AuthState call() {
-    return const _AuthState();
+  _AuthState call(
+      {@required Name name,
+      @required Email email,
+      @required CollegeID collegeID,
+      @required UserRole userRole,
+      @required Department department,
+      @required Level level,
+      @required Password password,
+      @required Password confirmPassword,
+      @required bool isSubmiting,
+      @required bool showErrorMessage,
+      @required Option<Either<FailureMessage, Unit>> authState}) {
+    return _AuthState(
+      name: name,
+      email: email,
+      collegeID: collegeID,
+      userRole: userRole,
+      department: department,
+      level: level,
+      password: password,
+      confirmPassword: confirmPassword,
+      isSubmiting: isSubmiting,
+      showErrorMessage: showErrorMessage,
+      authState: authState,
+    );
   }
 }
 
@@ -1380,12 +1876,39 @@ class _$AuthStateTearOff {
 const $AuthState = _$AuthStateTearOff();
 
 /// @nodoc
-mixin _$AuthState {}
+mixin _$AuthState {
+  Name get name;
+  Email get email;
+  CollegeID get collegeID;
+  UserRole get userRole;
+  Department get department;
+  Level get level;
+  Password get password;
+  Password get confirmPassword;
+  bool get isSubmiting;
+  bool get showErrorMessage;
+  Option<Either<FailureMessage, Unit>> get authState;
+
+  @JsonKey(ignore: true)
+  $AuthStateCopyWith<AuthState> get copyWith;
+}
 
 /// @nodoc
 abstract class $AuthStateCopyWith<$Res> {
   factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
       _$AuthStateCopyWithImpl<$Res>;
+  $Res call(
+      {Name name,
+      Email email,
+      CollegeID collegeID,
+      UserRole userRole,
+      Department department,
+      Level level,
+      Password password,
+      Password confirmPassword,
+      bool isSubmiting,
+      bool showErrorMessage,
+      Option<Either<FailureMessage, Unit>> authState});
 }
 
 /// @nodoc
@@ -1395,13 +1918,64 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
   final AuthState _value;
   // ignore: unused_field
   final $Res Function(AuthState) _then;
+
+  @override
+  $Res call({
+    Object name = freezed,
+    Object email = freezed,
+    Object collegeID = freezed,
+    Object userRole = freezed,
+    Object department = freezed,
+    Object level = freezed,
+    Object password = freezed,
+    Object confirmPassword = freezed,
+    Object isSubmiting = freezed,
+    Object showErrorMessage = freezed,
+    Object authState = freezed,
+  }) {
+    return _then(_value.copyWith(
+      name: name == freezed ? _value.name : name as Name,
+      email: email == freezed ? _value.email : email as Email,
+      collegeID:
+          collegeID == freezed ? _value.collegeID : collegeID as CollegeID,
+      userRole: userRole == freezed ? _value.userRole : userRole as UserRole,
+      department:
+          department == freezed ? _value.department : department as Department,
+      level: level == freezed ? _value.level : level as Level,
+      password: password == freezed ? _value.password : password as Password,
+      confirmPassword: confirmPassword == freezed
+          ? _value.confirmPassword
+          : confirmPassword as Password,
+      isSubmiting:
+          isSubmiting == freezed ? _value.isSubmiting : isSubmiting as bool,
+      showErrorMessage: showErrorMessage == freezed
+          ? _value.showErrorMessage
+          : showErrorMessage as bool,
+      authState: authState == freezed
+          ? _value.authState
+          : authState as Option<Either<FailureMessage, Unit>>,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$AuthStateCopyWith<$Res> {
+abstract class _$AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
   factory _$AuthStateCopyWith(
           _AuthState value, $Res Function(_AuthState) then) =
       __$AuthStateCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Name name,
+      Email email,
+      CollegeID collegeID,
+      UserRole userRole,
+      Department department,
+      Level level,
+      Password password,
+      Password confirmPassword,
+      bool isSubmiting,
+      bool showErrorMessage,
+      Option<Either<FailureMessage, Unit>> authState});
 }
 
 /// @nodoc
@@ -1412,26 +1986,212 @@ class __$AuthStateCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   _AuthState get _value => super._value as _AuthState;
+
+  @override
+  $Res call({
+    Object name = freezed,
+    Object email = freezed,
+    Object collegeID = freezed,
+    Object userRole = freezed,
+    Object department = freezed,
+    Object level = freezed,
+    Object password = freezed,
+    Object confirmPassword = freezed,
+    Object isSubmiting = freezed,
+    Object showErrorMessage = freezed,
+    Object authState = freezed,
+  }) {
+    return _then(_AuthState(
+      name: name == freezed ? _value.name : name as Name,
+      email: email == freezed ? _value.email : email as Email,
+      collegeID:
+          collegeID == freezed ? _value.collegeID : collegeID as CollegeID,
+      userRole: userRole == freezed ? _value.userRole : userRole as UserRole,
+      department:
+          department == freezed ? _value.department : department as Department,
+      level: level == freezed ? _value.level : level as Level,
+      password: password == freezed ? _value.password : password as Password,
+      confirmPassword: confirmPassword == freezed
+          ? _value.confirmPassword
+          : confirmPassword as Password,
+      isSubmiting:
+          isSubmiting == freezed ? _value.isSubmiting : isSubmiting as bool,
+      showErrorMessage: showErrorMessage == freezed
+          ? _value.showErrorMessage
+          : showErrorMessage as bool,
+      authState: authState == freezed
+          ? _value.authState
+          : authState as Option<Either<FailureMessage, Unit>>,
+    ));
+  }
 }
 
 /// @nodoc
-class _$_AuthState implements _AuthState {
-  const _$_AuthState();
+class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
+  const _$_AuthState(
+      {@required this.name,
+      @required this.email,
+      @required this.collegeID,
+      @required this.userRole,
+      @required this.department,
+      @required this.level,
+      @required this.password,
+      @required this.confirmPassword,
+      @required this.isSubmiting,
+      @required this.showErrorMessage,
+      @required this.authState})
+      : assert(name != null),
+        assert(email != null),
+        assert(collegeID != null),
+        assert(userRole != null),
+        assert(department != null),
+        assert(level != null),
+        assert(password != null),
+        assert(confirmPassword != null),
+        assert(isSubmiting != null),
+        assert(showErrorMessage != null),
+        assert(authState != null);
 
   @override
-  String toString() {
-    return 'AuthState()';
+  final Name name;
+  @override
+  final Email email;
+  @override
+  final CollegeID collegeID;
+  @override
+  final UserRole userRole;
+  @override
+  final Department department;
+  @override
+  final Level level;
+  @override
+  final Password password;
+  @override
+  final Password confirmPassword;
+  @override
+  final bool isSubmiting;
+  @override
+  final bool showErrorMessage;
+  @override
+  final Option<Either<FailureMessage, Unit>> authState;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthState(name: $name, email: $email, collegeID: $collegeID, userRole: $userRole, department: $department, level: $level, password: $password, confirmPassword: $confirmPassword, isSubmiting: $isSubmiting, showErrorMessage: $showErrorMessage, authState: $authState)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthState'))
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('collegeID', collegeID))
+      ..add(DiagnosticsProperty('userRole', userRole))
+      ..add(DiagnosticsProperty('department', department))
+      ..add(DiagnosticsProperty('level', level))
+      ..add(DiagnosticsProperty('password', password))
+      ..add(DiagnosticsProperty('confirmPassword', confirmPassword))
+      ..add(DiagnosticsProperty('isSubmiting', isSubmiting))
+      ..add(DiagnosticsProperty('showErrorMessage', showErrorMessage))
+      ..add(DiagnosticsProperty('authState', authState));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _AuthState);
+    return identical(this, other) ||
+        (other is _AuthState &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.email, email) ||
+                const DeepCollectionEquality().equals(other.email, email)) &&
+            (identical(other.collegeID, collegeID) ||
+                const DeepCollectionEquality()
+                    .equals(other.collegeID, collegeID)) &&
+            (identical(other.userRole, userRole) ||
+                const DeepCollectionEquality()
+                    .equals(other.userRole, userRole)) &&
+            (identical(other.department, department) ||
+                const DeepCollectionEquality()
+                    .equals(other.department, department)) &&
+            (identical(other.level, level) ||
+                const DeepCollectionEquality().equals(other.level, level)) &&
+            (identical(other.password, password) ||
+                const DeepCollectionEquality()
+                    .equals(other.password, password)) &&
+            (identical(other.confirmPassword, confirmPassword) ||
+                const DeepCollectionEquality()
+                    .equals(other.confirmPassword, confirmPassword)) &&
+            (identical(other.isSubmiting, isSubmiting) ||
+                const DeepCollectionEquality()
+                    .equals(other.isSubmiting, isSubmiting)) &&
+            (identical(other.showErrorMessage, showErrorMessage) ||
+                const DeepCollectionEquality()
+                    .equals(other.showErrorMessage, showErrorMessage)) &&
+            (identical(other.authState, authState) ||
+                const DeepCollectionEquality()
+                    .equals(other.authState, authState)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(email) ^
+      const DeepCollectionEquality().hash(collegeID) ^
+      const DeepCollectionEquality().hash(userRole) ^
+      const DeepCollectionEquality().hash(department) ^
+      const DeepCollectionEquality().hash(level) ^
+      const DeepCollectionEquality().hash(password) ^
+      const DeepCollectionEquality().hash(confirmPassword) ^
+      const DeepCollectionEquality().hash(isSubmiting) ^
+      const DeepCollectionEquality().hash(showErrorMessage) ^
+      const DeepCollectionEquality().hash(authState);
+
+  @JsonKey(ignore: true)
+  @override
+  _$AuthStateCopyWith<_AuthState> get copyWith =>
+      __$AuthStateCopyWithImpl<_AuthState>(this, _$identity);
 }
 
 abstract class _AuthState implements AuthState {
-  const factory _AuthState() = _$_AuthState;
+  const factory _AuthState(
+      {@required Name name,
+      @required Email email,
+      @required CollegeID collegeID,
+      @required UserRole userRole,
+      @required Department department,
+      @required Level level,
+      @required Password password,
+      @required Password confirmPassword,
+      @required bool isSubmiting,
+      @required bool showErrorMessage,
+      @required Option<Either<FailureMessage, Unit>> authState}) = _$_AuthState;
+
+  @override
+  Name get name;
+  @override
+  Email get email;
+  @override
+  CollegeID get collegeID;
+  @override
+  UserRole get userRole;
+  @override
+  Department get department;
+  @override
+  Level get level;
+  @override
+  Password get password;
+  @override
+  Password get confirmPassword;
+  @override
+  bool get isSubmiting;
+  @override
+  bool get showErrorMessage;
+  @override
+  Option<Either<FailureMessage, Unit>> get authState;
+  @override
+  @JsonKey(ignore: true)
+  _$AuthStateCopyWith<_AuthState> get copyWith;
 }

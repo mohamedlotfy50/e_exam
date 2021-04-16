@@ -1,5 +1,5 @@
 class UserRole {
-  final List<String> roles = const ['Admin', 'Doctor', 'Student'];
+  static const List<String> roles = const ['Admin', 'Doctor', 'Student'];
   final String _role;
   UserRole(this._role);
   bool isAdmin() => _role == roles[0];
