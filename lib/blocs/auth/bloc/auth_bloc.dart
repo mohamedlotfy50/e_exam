@@ -39,7 +39,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         yield state.copyWith(collegeID: CollegeID(e.id));
       },
       userRoleChanged: (e) async* {
-        yield state.copyWith(userRole: UserRole(e.role));
+        yield state.copyWith(userRole: UserRole(role: e.role));
         if (!state.userRole.isAdmin()) {
           final Level _level = await _authRepository.getLevels();
           yield state.copyWith(level: _level);
@@ -75,7 +75,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           name: Name(''),
           password: Password(''),
           showErrorMessage: false,
-          userRole: UserRole(UserRole.roles.first),
+          userRole: UserRole(),
         );
       },
       signIn: (e) async* {
@@ -101,8 +101,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         );
       },
       signUp: (e) async* {
+        yield state.copyWith(
+          isSubmiting: true,
+          showErrorMessage: true,
+          authState: none(),
+        );
         print(
-            'name:${state.name} \nemail:${state.email} \npassword:${state.password} \nlevel:${state.level} \ndepartment: ${state.department}\nrole:${state.userRole} \ncollegeId:${state.collegeID}');
+            'name:${state.name.getValueOrNull()} \nemail:${state.email.getValueOrNull()} \npassword:${state.password.getValueOrNull()} \nlevel:${state.level.selectedLevel} \ndepartment: ${state.department.selectedDepartment}\nrole:${state.userRole.role} \ncollegeId:${state.collegeID.getValueOrNull()}');
       },
     );
   }

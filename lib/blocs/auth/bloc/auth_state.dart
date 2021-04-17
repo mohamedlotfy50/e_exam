@@ -26,6 +26,6 @@ abstract class AuthState with _$AuthState {
         name: Name(''),
         password: Password(''),
         showErrorMessage: false,
-        userRole: UserRole(UserRole.roles.first),
+        userRole: UserRole(),
       );
 }

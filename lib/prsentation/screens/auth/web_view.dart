@@ -1,4 +1,5 @@
 import 'package:e_exam/prsentation/screens/auth/signin_screen.dart';
+import 'package:e_exam/prsentation/screens/auth/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class WebScreen extends StatelessWidget {
@@ -14,9 +15,7 @@ class WebScreen extends StatelessWidget {
             children: [
               Expanded(child: SignInScreen()),
               Expanded(
-                child: Container(
-                  color: Colors.blue,
-                ),
+                child: SignUpScreen(),
               ),
             ],
           ),

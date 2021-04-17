@@ -14,7 +14,7 @@ class Password {
   }
 
   String isEqual(Password obj) {
-    if (_value == obj._value) {
+    if (_value != obj._value && _value.isRight() && obj.isValid()) {
       return 'password does not match';
     }
     return null;

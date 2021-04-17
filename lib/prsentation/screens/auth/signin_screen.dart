@@ -46,10 +46,11 @@ class SignInScreen extends StatelessWidget {
                   },
                 ),
                 ElevatedButton(
-                    onPressed: () {
-                      context.read<AuthBloc>().add(SignIn());
-                    },
-                    child: Text('Sign in'))
+                  onPressed: () {
+                    context.read<AuthBloc>().add(SignIn());
+                  },
+                  child: Text('Sign in'),
+                ),
               ],
             ),
           );
