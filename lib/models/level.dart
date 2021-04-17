@@ -1,13 +1,13 @@
 class Level {
-  List<String> levels = [];
-  final String _level;
+  final List<String> levels;
+  final String selectedLevel;
   bool isValid() {
-    if (_level != null && levels.contains(_level)) {
+    if (selectedLevel != null && levels.contains(selectedLevel)) {
       return true;
     } else {
       return false;
     }
   }
 
-  Level(this._level);
+  Level(this.selectedLevel, this.levels);
 }

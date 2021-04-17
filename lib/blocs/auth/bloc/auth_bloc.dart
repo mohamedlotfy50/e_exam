@@ -40,12 +40,22 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       },
       userRoleChanged: (e) async* {
         yield state.copyWith(userRole: UserRole(e.role));
+        if (!state.userRole.isAdmin()) {
+          final Level _level = await _authRepository.getLevels();
+          yield state.copyWith(level: _level);
+        }
       },
       departmentChanged: (e) async* {
-        yield state.copyWith(department: Department(e.department));
+        yield state.copyWith(
+            department: Department(e.department, state.department.departments));
       },
       levelChanged: (e) async* {
-        yield state.copyWith(level: Level(e.level));
+        yield state.copyWith(level: Level(e.level, state.level.levels));
+        if (state.userRole.isStudent()) {
+          final Department _departments =
+              await _authRepository.getdepartments(state.level.selectedLevel);
+          yield state.copyWith(department: _departments);
+        }
       },
       passwordChanged: (e) async* {
         yield state.copyWith(password: Password(e.password));
@@ -58,10 +68,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           authState: none(),
           collegeID: CollegeID(''),
           confirmPassword: Password(''),
-          department: Department(''),
+          department: Department(null, []),
           email: Email(''),
           isSubmiting: false,
-          level: Level(''),
+          level: Level(null, []),
           name: Name(''),
           password: Password(''),
           showErrorMessage: false,
@@ -83,11 +93,16 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             authState: some(_signin),
           );
         }
+        await _authRepository.getdepartments('one');
         yield state.copyWith(
           isSubmiting: false,
           showErrorMessage: true,
           authState: none(),
         );
+      },
+      signUp: (e) async* {
+        print(
+            'name:${state.name} \nemail:${state.email} \npassword:${state.password} \nlevel:${state.level} \ndepartment: ${state.department}\nrole:${state.userRole} \ncollegeId:${state.collegeID}');
       },
     );
   }

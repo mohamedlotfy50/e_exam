@@ -8,8 +8,8 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 18),
       color: Colors.yellow,
+      padding: EdgeInsets.symmetric(horizontal: 18),
       child: BlocConsumer<AuthBloc, AuthState>(
         bloc: context.read<AuthBloc>(),
         listener: (context, state) {},

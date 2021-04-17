@@ -1,13 +1,14 @@
 class Department {
-  List<String> departments = [];
-  final String _department;
+  final List<String> departments;
+  final String selectedDepartment;
   bool isValid() {
-    if (_department != null && departments.contains(_department)) {
+    if (selectedDepartment != null &&
+        departments.contains(selectedDepartment)) {
       return true;
     } else {
       return false;
     }
   }
 
-  Department(this._department);
+  Department(this.selectedDepartment, this.departments);
 }

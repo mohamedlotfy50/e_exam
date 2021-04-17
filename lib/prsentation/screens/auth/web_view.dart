@@ -4,23 +4,23 @@ import 'package:flutter/material.dart';
 class WebScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(
-        horizontal: 35,
-        vertical: 35,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: Colors.red,
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Expanded(child: SignInScreen()),
-          Expanded(
-            child: Image.asset('assets/images/background.jpg'),
+    return Padding(
+      padding: const EdgeInsets.all(80.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Container(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(child: SignInScreen()),
+              Expanded(
+                child: Container(
+                  color: Colors.blue,
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
