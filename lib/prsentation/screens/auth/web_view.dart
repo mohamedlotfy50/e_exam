@@ -14,14 +14,12 @@ class WebScreen extends StatelessWidget {
         color: Colors.red,
       ),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(child: SignInScreen()),
           Expanded(
-              child: ClipRRect(
-            child: Container(
-              color: Colors.green,
-            ),
-          )),
+            child: Image.asset('assets/images/background.jpg'),
+          ),
         ],
       ),
     );

@@ -8,7 +8,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';
 
 import '../../../data/auth/repository/auth_repository.dart';
-import '../../../data/auth/repository/auth_repository.dart';
 import '../../../models/department.dart';
 import '../../../models/email.dart';
 import '../../../models/failure_message.dart';
