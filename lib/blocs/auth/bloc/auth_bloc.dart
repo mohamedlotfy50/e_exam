@@ -29,6 +29,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     AuthEvent event,
   ) async* {
     yield* event.map(
+      getLevelAndDepartment: (e) async* {
+        if (!state.userRole.isAdmin()) {
+          await _authRepository.loadLevelsAndDepartment();
+          yield state.copyWith(department: _authRepository.getDeprtments());
+        }
+      },
       nameChanged: (e) async* {
         yield state.copyWith(name: Name(e.name));
       },
@@ -39,24 +45,14 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         yield state.copyWith(collegeID: CollegeID(e.id));
       },
       userRoleChanged: (e) async* {
-        yield state.copyWith(userRole: UserRole(role: e.role));
-        if (!state.userRole.isAdmin()) {
-          final Level _level = await _authRepository.getLevels();
-          yield state.copyWith(level: _level);
-        }
+        yield state.copyWith(userRole: UserRole(e.role));
+        this.add(GetLevelAndDepartment());
       },
       departmentChanged: (e) async* {
         yield state.copyWith(
             department: Department(e.department, state.department.departments));
       },
-      levelChanged: (e) async* {
-        yield state.copyWith(level: Level(e.level, state.level.levels));
-        if (state.userRole.isStudent()) {
-          final Department _departments =
-              await _authRepository.getdepartments(state.level.selectedLevel);
-          yield state.copyWith(department: _departments);
-        }
-      },
+      levelChanged: (e) async* {},
       passwordChanged: (e) async* {
         yield state.copyWith(password: Password(e.password));
       },
@@ -75,7 +71,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           name: Name(''),
           password: Password(''),
           showErrorMessage: false,
-          userRole: UserRole(),
+          userRole: UserRole('Admin'),
         );
       },
       signIn: (e) async* {
@@ -93,7 +89,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             authState: some(_signin),
           );
         }
-        await _authRepository.getdepartments('one');
         yield state.copyWith(
           isSubmiting: false,
           showErrorMessage: true,

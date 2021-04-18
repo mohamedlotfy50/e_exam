@@ -1,4 +1,7 @@
+import 'dart:collection';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:flutter/foundation.dart';
 
@@ -16,34 +19,15 @@ class Authentication {
     await _firebaseAuth.signOut();
   }
 
-  Future<List<String>> getLevels() async {
-    List<String> _levels = [];
+  Future<Map<String, dynamic>> getLevelsOrDepartment() async {
+    Map<String, dynamic> _map = {};
     final _snapShot = await _firestore
-        .collection('cI')
-        .where('level')
-        .orderBy('arrange')
+        .collection('levels&departments')
+        .doc('dRMg7c6WTiyPv8Cyhu9j')
         .get();
-    _snapShot.docs.forEach((e) => _levels.add(e.data()['level']));
-    return _levels;
-  }
+    _map = cast(_snapShot.data()['levels&departments']);
 
-  Future<List<String>> getDepartments(String level) async {
-    List<String> _departments = [];
-
-    await _firestore
-        .collection('cI')
-        .where('level', isEqualTo: level)
-        .get()
-        .then((value) async {
-      final _sub = await value.docs.single.reference
-          .collection('departments')
-          .where('department')
-          .get();
-      _sub.docs.forEach((element) {
-        _departments.add(element.data()['department']);
-      });
-    });
-    return _departments;
+    return _map;
   }
 
   // Future<User> isSignedinUser() async {

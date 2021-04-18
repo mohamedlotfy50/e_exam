@@ -9,7 +9,9 @@ class SignUpScreen extends StatelessWidget {
       color: Colors.grey,
       child: BlocConsumer<AuthBloc, AuthState>(
         bloc: context.read<AuthBloc>(),
-        listener: (context, state) {},
+        listener: (context, state) {
+          print(state.department.selectedDepartment);
+        },
         builder: (context, state) {
           return Form(
             autovalidateMode: state.showErrorMessage
@@ -58,21 +60,10 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 if (!state.userRole.isAdmin())
                   DropdownButton<String>(
-                    onChanged: (level) {
-                      context.read<AuthBloc>().add(LevelChanged(level));
-                    },
-                    items: state.level.levels
-                        .map((e) => DropdownMenuItem<String>(
-                              child: Text(e),
-                              value: e,
-                            ))
-                        .toList(),
-                    value: state.level.selectedLevel,
-                  ),
-                if (state.userRole.isStudent() && state.level.isValid())
-                  DropdownButton<String>(
-                    onChanged: (level) {
-                      context.read<AuthBloc>().add(DepartmentChanged(level));
+                    onChanged: (department) {
+                      context
+                          .read<AuthBloc>()
+                          .add(DepartmentChanged(department));
                     },
                     items: state.department.departments
                         .map((e) => DropdownMenuItem<String>(
@@ -82,6 +73,19 @@ class SignUpScreen extends StatelessWidget {
                         .toList(),
                     value: state.department.selectedDepartment,
                   ),
+                // if (state.userRole.isStudent() && state.level.isValid())
+                //   DropdownButton<String>(
+                //     onChanged: (level) {
+                //       context.read<AuthBloc>().add(DepartmentChanged(level));
+                //     },
+                //     items: state.department.departments
+                //         .map((e) => DropdownMenuItem<String>(
+                //               child: Text(e),
+                //               value: e,
+                //             ))
+                //         .toList(),
+                //     value: state.department.selectedDepartment,
+                //   ),
                 TextFormField(
                   decoration: InputDecoration(hintText: 'password'),
                   onChanged: (password) {

@@ -70,6 +70,11 @@ class _$AuthEventTearOff {
   }
 
 // ignore: unused_element
+  GetLevelAndDepartment getLevelAndDepartment() {
+    return const GetLevelAndDepartment();
+  }
+
+// ignore: unused_element
   SignIn signIn() {
     return const SignIn();
   }
@@ -101,6 +106,7 @@ mixin _$AuthEvent {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -115,6 +121,7 @@ mixin _$AuthEvent {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -130,6 +137,7 @@ mixin _$AuthEvent {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -144,6 +152,7 @@ mixin _$AuthEvent {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -242,6 +251,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -254,6 +264,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -271,6 +282,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -294,6 +306,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -306,6 +319,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -323,6 +337,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -420,6 +435,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -432,6 +448,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -449,6 +466,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -472,6 +490,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -484,6 +503,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -501,6 +521,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -600,6 +621,7 @@ class _$CollageIDChanged
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -612,6 +634,7 @@ class _$CollageIDChanged
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -629,6 +652,7 @@ class _$CollageIDChanged
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -652,6 +676,7 @@ class _$CollageIDChanged
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -664,6 +689,7 @@ class _$CollageIDChanged
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -681,6 +707,7 @@ class _$CollageIDChanged
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -780,6 +807,7 @@ class _$UserRoleChanged
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -792,6 +820,7 @@ class _$UserRoleChanged
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -809,6 +838,7 @@ class _$UserRoleChanged
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -832,6 +862,7 @@ class _$UserRoleChanged
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -844,6 +875,7 @@ class _$UserRoleChanged
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -861,6 +893,7 @@ class _$UserRoleChanged
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -962,6 +995,7 @@ class _$DepartmentChanged
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -974,6 +1008,7 @@ class _$DepartmentChanged
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -991,6 +1026,7 @@ class _$DepartmentChanged
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -1014,6 +1050,7 @@ class _$DepartmentChanged
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -1026,6 +1063,7 @@ class _$DepartmentChanged
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1043,6 +1081,7 @@ class _$DepartmentChanged
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -1140,6 +1179,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -1152,6 +1192,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1169,6 +1210,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -1192,6 +1234,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -1204,6 +1247,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1221,6 +1265,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -1321,6 +1366,7 @@ class _$PasswordChanged
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -1333,6 +1379,7 @@ class _$PasswordChanged
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1350,6 +1397,7 @@ class _$PasswordChanged
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -1373,6 +1421,7 @@ class _$PasswordChanged
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -1385,6 +1434,7 @@ class _$PasswordChanged
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1402,6 +1452,7 @@ class _$PasswordChanged
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -1508,6 +1559,7 @@ class _$PasswordConfigChanged
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -1520,6 +1572,7 @@ class _$PasswordConfigChanged
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1537,6 +1590,7 @@ class _$PasswordConfigChanged
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -1560,6 +1614,7 @@ class _$PasswordConfigChanged
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -1572,6 +1627,7 @@ class _$PasswordConfigChanged
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1589,6 +1645,7 @@ class _$PasswordConfigChanged
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -1609,6 +1666,166 @@ abstract class PasswordConfigChanged implements AuthEvent {
   String get passwordConfig;
   @JsonKey(ignore: true)
   $PasswordConfigChangedCopyWith<PasswordConfigChanged> get copyWith;
+}
+
+/// @nodoc
+abstract class $GetLevelAndDepartmentCopyWith<$Res> {
+  factory $GetLevelAndDepartmentCopyWith(GetLevelAndDepartment value,
+          $Res Function(GetLevelAndDepartment) then) =
+      _$GetLevelAndDepartmentCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$GetLevelAndDepartmentCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res>
+    implements $GetLevelAndDepartmentCopyWith<$Res> {
+  _$GetLevelAndDepartmentCopyWithImpl(
+      GetLevelAndDepartment _value, $Res Function(GetLevelAndDepartment) _then)
+      : super(_value, (v) => _then(v as GetLevelAndDepartment));
+
+  @override
+  GetLevelAndDepartment get _value => super._value as GetLevelAndDepartment;
+}
+
+/// @nodoc
+class _$GetLevelAndDepartment
+    with DiagnosticableTreeMixin
+    implements GetLevelAndDepartment {
+  const _$GetLevelAndDepartment();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.getLevelAndDepartment()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.getLevelAndDepartment'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is GetLevelAndDepartment);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult nameChanged(String name),
+    @required TResult emailChanged(String email),
+    @required TResult collageIDChanged(String id),
+    @required TResult userRoleChanged(String role),
+    @required TResult departmentChanged(String department),
+    @required TResult levelChanged(String level),
+    @required TResult passwordChanged(String password),
+    @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
+    @required TResult signIn(),
+    @required TResult signUp(),
+    @required TResult toDefault(),
+  }) {
+    assert(nameChanged != null);
+    assert(emailChanged != null);
+    assert(collageIDChanged != null);
+    assert(userRoleChanged != null);
+    assert(departmentChanged != null);
+    assert(levelChanged != null);
+    assert(passwordChanged != null);
+    assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
+    assert(signIn != null);
+    assert(signUp != null);
+    assert(toDefault != null);
+    return getLevelAndDepartment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult nameChanged(String name),
+    TResult emailChanged(String email),
+    TResult collageIDChanged(String id),
+    TResult userRoleChanged(String role),
+    TResult departmentChanged(String department),
+    TResult levelChanged(String level),
+    TResult passwordChanged(String password),
+    TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
+    TResult signIn(),
+    TResult signUp(),
+    TResult toDefault(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (getLevelAndDepartment != null) {
+      return getLevelAndDepartment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult userRoleChanged(UserRoleChanged value),
+    @required TResult departmentChanged(DepartmentChanged value),
+    @required TResult levelChanged(LevelChanged value),
+    @required TResult passwordChanged(PasswordChanged value),
+    @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
+    @required TResult signIn(SignIn value),
+    @required TResult signUp(SignUp value),
+    @required TResult toDefault(ToDefault value),
+  }) {
+    assert(nameChanged != null);
+    assert(emailChanged != null);
+    assert(collageIDChanged != null);
+    assert(userRoleChanged != null);
+    assert(departmentChanged != null);
+    assert(levelChanged != null);
+    assert(passwordChanged != null);
+    assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
+    assert(signIn != null);
+    assert(signUp != null);
+    assert(toDefault != null);
+    return getLevelAndDepartment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult collageIDChanged(CollageIDChanged value),
+    TResult userRoleChanged(UserRoleChanged value),
+    TResult departmentChanged(DepartmentChanged value),
+    TResult levelChanged(LevelChanged value),
+    TResult passwordChanged(PasswordChanged value),
+    TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
+    TResult signIn(SignIn value),
+    TResult signUp(SignUp value),
+    TResult toDefault(ToDefault value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (getLevelAndDepartment != null) {
+      return getLevelAndDepartment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetLevelAndDepartment implements AuthEvent {
+  const factory GetLevelAndDepartment() = _$GetLevelAndDepartment;
 }
 
 /// @nodoc
@@ -1661,6 +1878,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -1673,6 +1891,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1690,6 +1909,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -1713,6 +1933,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -1725,6 +1946,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1742,6 +1964,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -1809,6 +2032,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -1821,6 +2045,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1838,6 +2063,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -1861,6 +2087,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -1873,6 +2100,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1890,6 +2118,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),
@@ -1957,6 +2186,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
     @required TResult levelChanged(String level),
     @required TResult passwordChanged(String password),
     @required TResult passwordConfigChanged(String passwordConfig),
+    @required TResult getLevelAndDepartment(),
     @required TResult signIn(),
     @required TResult signUp(),
     @required TResult toDefault(),
@@ -1969,6 +2199,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -1986,6 +2217,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
     TResult levelChanged(String level),
     TResult passwordChanged(String password),
     TResult passwordConfigChanged(String passwordConfig),
+    TResult getLevelAndDepartment(),
     TResult signIn(),
     TResult signUp(),
     TResult toDefault(),
@@ -2009,6 +2241,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
     @required TResult levelChanged(LevelChanged value),
     @required TResult passwordChanged(PasswordChanged value),
     @required TResult passwordConfigChanged(PasswordConfigChanged value),
+    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
     @required TResult signIn(SignIn value),
     @required TResult signUp(SignUp value),
     @required TResult toDefault(ToDefault value),
@@ -2021,6 +2254,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
     assert(levelChanged != null);
     assert(passwordChanged != null);
     assert(passwordConfigChanged != null);
+    assert(getLevelAndDepartment != null);
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
@@ -2038,6 +2272,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
     TResult levelChanged(LevelChanged value),
     TResult passwordChanged(PasswordChanged value),
     TResult passwordConfigChanged(PasswordConfigChanged value),
+    TResult getLevelAndDepartment(GetLevelAndDepartment value),
     TResult signIn(SignIn value),
     TResult signUp(SignUp value),
     TResult toDefault(ToDefault value),

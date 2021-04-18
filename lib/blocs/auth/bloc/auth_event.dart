@@ -13,6 +13,8 @@ abstract class AuthEvent with _$AuthEvent {
   const factory AuthEvent.passwordChanged(String password) = PasswordChanged;
   const factory AuthEvent.passwordConfigChanged(String passwordConfig) =
       PasswordConfigChanged;
+  const factory AuthEvent.getLevelAndDepartment() = GetLevelAndDepartment;
+
   const factory AuthEvent.signIn() = SignIn;
   const factory AuthEvent.signUp() = SignUp;
   const factory AuthEvent.toDefault() = ToDefault;
