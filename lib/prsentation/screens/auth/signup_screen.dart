@@ -9,9 +9,7 @@ class SignUpScreen extends StatelessWidget {
       color: Colors.grey,
       child: BlocConsumer<AuthBloc, AuthState>(
         bloc: context.read<AuthBloc>(),
-        listener: (context, state) {
-          print(state.department.selectedDepartment);
-        },
+        listener: (context, state) {},
         builder: (context, state) {
           return Form(
             autovalidateMode: state.showErrorMessage
@@ -58,6 +56,19 @@ class SignUpScreen extends StatelessWidget {
                       .toList(),
                   value: state.userRole.role,
                 ),
+                if (state.userRole.isStudent())
+                  DropdownButton<String>(
+                    onChanged: (level) {
+                      context.read<AuthBloc>().add(LevelChanged(level));
+                    },
+                    items: state.level.levels
+                        .map((e) => DropdownMenuItem<String>(
+                              child: Text(e),
+                              value: e,
+                            ))
+                        .toList(),
+                    value: state.level.selectedLevel,
+                  ),
                 if (!state.userRole.isAdmin())
                   DropdownButton<String>(
                     onChanged: (department) {
@@ -73,19 +84,6 @@ class SignUpScreen extends StatelessWidget {
                         .toList(),
                     value: state.department.selectedDepartment,
                   ),
-                // if (state.userRole.isStudent() && state.level.isValid())
-                //   DropdownButton<String>(
-                //     onChanged: (level) {
-                //       context.read<AuthBloc>().add(DepartmentChanged(level));
-                //     },
-                //     items: state.department.departments
-                //         .map((e) => DropdownMenuItem<String>(
-                //               child: Text(e),
-                //               value: e,
-                //             ))
-                //         .toList(),
-                //     value: state.department.selectedDepartment,
-                //   ),
                 TextFormField(
                   decoration: InputDecoration(hintText: 'password'),
                   onChanged: (password) {
@@ -105,16 +103,23 @@ class SignUpScreen extends StatelessWidget {
                     context.read<AuthBloc>().add(PasswordConfigChanged(name));
                   },
                   validator: (_) {
-                    return context.read<AuthBloc>().state.password.isEqual(
-                        context.read<AuthBloc>().state.confirmPassword);
+                    return context
+                        .read<AuthBloc>()
+                        .state
+                        .password
+                        .isEqualErrorMessage(
+                            context.read<AuthBloc>().state.confirmPassword);
                   },
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    context.read<AuthBloc>().add(SignUp());
-                  },
-                  child: Text('Sign in'),
-                ),
+                IgnorePointer(
+                  ignoring: state.isSubmiting || state.showLoading,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      context.read<AuthBloc>().add(SignUp());
+                    },
+                    child: Text('Sign in'),
+                  ),
+                )
               ],
             ),
           );

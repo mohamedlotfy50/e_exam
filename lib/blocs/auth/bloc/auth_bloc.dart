@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:e_exam/models/name.dart';
+import 'package:e_exam/models/user.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';
@@ -30,10 +31,20 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   ) async* {
     yield* event.map(
       getLevelAndDepartment: (e) async* {
+        yield state.copyWith(showLoading: true);
         if (!state.userRole.isAdmin()) {
           await _authRepository.loadLevelsAndDepartment();
-          yield state.copyWith(department: _authRepository.getDeprtments());
+
+          if (state.userRole.isStudent()) {
+            yield state.copyWith(
+                department: _authRepository.getCorrospondingDeprtments(
+                    _authRepository.getLevels().selectedLevel),
+                level: _authRepository.getLevels());
+          } else {
+            yield state.copyWith(department: _authRepository.getDeprtments());
+          }
         }
+        yield state.copyWith(showLoading: false);
       },
       nameChanged: (e) async* {
         yield state.copyWith(name: Name(e.name));
@@ -41,18 +52,26 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emailChanged: (e) async* {
         yield state.copyWith(email: Email(e.email));
       },
-      collageIDChanged: (e) async* {
+      collegeIDChanged: (e) async* {
         yield state.copyWith(collegeID: CollegeID(e.id));
       },
       userRoleChanged: (e) async* {
-        yield state.copyWith(userRole: UserRole(e.role));
+        yield state.copyWith(
+            userRole: UserRole(e.role),
+            level: Level(null),
+            department: Department(null));
         this.add(GetLevelAndDepartment());
       },
       departmentChanged: (e) async* {
         yield state.copyWith(
-            department: Department(e.department, state.department.departments));
+            department: Department(e.department,
+                departments: state.department.departments));
       },
-      levelChanged: (e) async* {},
+      levelChanged: (e) async* {
+        yield state.copyWith(
+            level: Level(e.level, levels: state.level.levels),
+            department: _authRepository.getCorrospondingDeprtments(e.level));
+      },
       passwordChanged: (e) async* {
         yield state.copyWith(password: Password(e.password));
       },
@@ -64,10 +83,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           authState: none(),
           collegeID: CollegeID(''),
           confirmPassword: Password(''),
-          department: Department(null, []),
+          department: Department(null),
           email: Email(''),
           isSubmiting: false,
-          level: Level(null, []),
+          level: Level(null),
           name: Name(''),
           password: Password(''),
           showErrorMessage: false,
@@ -101,8 +120,31 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           showErrorMessage: true,
           authState: none(),
         );
-        print(
-            'name:${state.name.getValueOrNull()} \nemail:${state.email.getValueOrNull()} \npassword:${state.password.getValueOrNull()} \nlevel:${state.level.selectedLevel} \ndepartment: ${state.department.selectedDepartment}\nrole:${state.userRole.role} \ncollegeId:${state.collegeID.getValueOrNull()}');
+        final User _user = User(
+          uid: state.collegeID.getValueOrNull(),
+          name: state.name,
+          email: state.email,
+          role: state.userRole,
+          collegeID: state.collegeID,
+          level: state.level,
+          department: state.department,
+          password: state.password,
+        );
+
+        if (_user.isValidUser() &&
+            state.confirmPassword.isEqual(state.password)) {
+          final _state = await _authRepository.requestSignIn(_user);
+          yield state.copyWith(
+            isSubmiting: false,
+            showErrorMessage: false,
+            authState: some(_state),
+          );
+        }
+        yield state.copyWith(
+          isSubmiting: false,
+          showErrorMessage: true,
+          authState: none(),
+        );
       },
     );
   }

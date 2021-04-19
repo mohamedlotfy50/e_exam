@@ -1,5 +1,3 @@
-import 'dart:collection';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide User;
@@ -30,11 +28,16 @@ class Authentication {
     return _map;
   }
 
-  // Future<User> isSignedinUser() async {
-  //   final x = _firebaseAuth.authStateChanges();
-  // }
-
-  Future<void> requestSignUp(Map<String, dynamic> data) async {
-    await _firestore.collection('request').add(data);
+  Future<void> requestSignUp(Map<String, dynamic> data, String id) async {
+    final doc = await _firestore.collection('request').doc(id).get();
+    if (doc.exists) {
+      throw FirebaseException(
+          plugin: 'User is Already requested',
+          message:
+              'This user is already requesting a for sign in please wait till the admin accept.');
+    } else {
+      await _firestore.collection('request').doc(id).set(data);
+    }
   }
+  //TODO 1: check if the user is already signed in
 }

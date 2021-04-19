@@ -28,8 +28,8 @@ class _$AuthEventTearOff {
   }
 
 // ignore: unused_element
-  CollageIDChanged collageIDChanged(String id) {
-    return CollageIDChanged(
+  CollegeIDChanged collegeIDChanged(String id) {
+    return CollegeIDChanged(
       id,
     );
   }
@@ -100,7 +100,7 @@ mixin _$AuthEvent {
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -115,7 +115,7 @@ mixin _$AuthEvent {
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -131,7 +131,7 @@ mixin _$AuthEvent {
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -146,7 +146,7 @@ mixin _$AuthEvent {
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -245,7 +245,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -258,7 +258,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -276,7 +276,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -300,7 +300,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -313,7 +313,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -331,7 +331,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -429,7 +429,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -442,7 +442,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -460,7 +460,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -484,7 +484,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -497,7 +497,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -515,7 +515,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -544,59 +544,59 @@ abstract class EmailChanged implements AuthEvent {
 }
 
 /// @nodoc
-abstract class $CollageIDChangedCopyWith<$Res> {
-  factory $CollageIDChangedCopyWith(
-          CollageIDChanged value, $Res Function(CollageIDChanged) then) =
-      _$CollageIDChangedCopyWithImpl<$Res>;
+abstract class $CollegeIDChangedCopyWith<$Res> {
+  factory $CollegeIDChangedCopyWith(
+          CollegeIDChanged value, $Res Function(CollegeIDChanged) then) =
+      _$CollegeIDChangedCopyWithImpl<$Res>;
   $Res call({String id});
 }
 
 /// @nodoc
-class _$CollageIDChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
-    implements $CollageIDChangedCopyWith<$Res> {
-  _$CollageIDChangedCopyWithImpl(
-      CollageIDChanged _value, $Res Function(CollageIDChanged) _then)
-      : super(_value, (v) => _then(v as CollageIDChanged));
+class _$CollegeIDChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
+    implements $CollegeIDChangedCopyWith<$Res> {
+  _$CollegeIDChangedCopyWithImpl(
+      CollegeIDChanged _value, $Res Function(CollegeIDChanged) _then)
+      : super(_value, (v) => _then(v as CollegeIDChanged));
 
   @override
-  CollageIDChanged get _value => super._value as CollageIDChanged;
+  CollegeIDChanged get _value => super._value as CollegeIDChanged;
 
   @override
   $Res call({
     Object id = freezed,
   }) {
-    return _then(CollageIDChanged(
+    return _then(CollegeIDChanged(
       id == freezed ? _value.id : id as String,
     ));
   }
 }
 
 /// @nodoc
-class _$CollageIDChanged
+class _$CollegeIDChanged
     with DiagnosticableTreeMixin
-    implements CollageIDChanged {
-  const _$CollageIDChanged(this.id) : assert(id != null);
+    implements CollegeIDChanged {
+  const _$CollegeIDChanged(this.id) : assert(id != null);
 
   @override
   final String id;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AuthEvent.collageIDChanged(id: $id)';
+    return 'AuthEvent.collegeIDChanged(id: $id)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'AuthEvent.collageIDChanged'))
+      ..add(DiagnosticsProperty('type', 'AuthEvent.collegeIDChanged'))
       ..add(DiagnosticsProperty('id', id));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is CollageIDChanged &&
+        (other is CollegeIDChanged &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)));
   }
@@ -607,15 +607,15 @@ class _$CollageIDChanged
 
   @JsonKey(ignore: true)
   @override
-  $CollageIDChangedCopyWith<CollageIDChanged> get copyWith =>
-      _$CollageIDChangedCopyWithImpl<CollageIDChanged>(this, _$identity);
+  $CollegeIDChangedCopyWith<CollegeIDChanged> get copyWith =>
+      _$CollegeIDChangedCopyWithImpl<CollegeIDChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -628,7 +628,7 @@ class _$CollageIDChanged
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -638,7 +638,7 @@ class _$CollageIDChanged
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
-    return collageIDChanged(id);
+    return collegeIDChanged(id);
   }
 
   @override
@@ -646,7 +646,7 @@ class _$CollageIDChanged
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -659,8 +659,8 @@ class _$CollageIDChanged
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (collageIDChanged != null) {
-      return collageIDChanged(id);
+    if (collegeIDChanged != null) {
+      return collegeIDChanged(id);
     }
     return orElse();
   }
@@ -670,7 +670,7 @@ class _$CollageIDChanged
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -683,7 +683,7 @@ class _$CollageIDChanged
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -693,7 +693,7 @@ class _$CollageIDChanged
     assert(signIn != null);
     assert(signUp != null);
     assert(toDefault != null);
-    return collageIDChanged(this);
+    return collegeIDChanged(this);
   }
 
   @override
@@ -701,7 +701,7 @@ class _$CollageIDChanged
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -714,19 +714,19 @@ class _$CollageIDChanged
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (collageIDChanged != null) {
-      return collageIDChanged(this);
+    if (collegeIDChanged != null) {
+      return collegeIDChanged(this);
     }
     return orElse();
   }
 }
 
-abstract class CollageIDChanged implements AuthEvent {
-  const factory CollageIDChanged(String id) = _$CollageIDChanged;
+abstract class CollegeIDChanged implements AuthEvent {
+  const factory CollegeIDChanged(String id) = _$CollegeIDChanged;
 
   String get id;
   @JsonKey(ignore: true)
-  $CollageIDChangedCopyWith<CollageIDChanged> get copyWith;
+  $CollegeIDChangedCopyWith<CollegeIDChanged> get copyWith;
 }
 
 /// @nodoc
@@ -801,7 +801,7 @@ class _$UserRoleChanged
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -814,7 +814,7 @@ class _$UserRoleChanged
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -832,7 +832,7 @@ class _$UserRoleChanged
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -856,7 +856,7 @@ class _$UserRoleChanged
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -869,7 +869,7 @@ class _$UserRoleChanged
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -887,7 +887,7 @@ class _$UserRoleChanged
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -989,7 +989,7 @@ class _$DepartmentChanged
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -1002,7 +1002,7 @@ class _$DepartmentChanged
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1020,7 +1020,7 @@ class _$DepartmentChanged
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -1044,7 +1044,7 @@ class _$DepartmentChanged
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -1057,7 +1057,7 @@ class _$DepartmentChanged
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1075,7 +1075,7 @@ class _$DepartmentChanged
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -1173,7 +1173,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -1186,7 +1186,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1204,7 +1204,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -1228,7 +1228,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -1241,7 +1241,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1259,7 +1259,7 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -1360,7 +1360,7 @@ class _$PasswordChanged
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -1373,7 +1373,7 @@ class _$PasswordChanged
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1391,7 +1391,7 @@ class _$PasswordChanged
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -1415,7 +1415,7 @@ class _$PasswordChanged
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -1428,7 +1428,7 @@ class _$PasswordChanged
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1446,7 +1446,7 @@ class _$PasswordChanged
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -1553,7 +1553,7 @@ class _$PasswordConfigChanged
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -1566,7 +1566,7 @@ class _$PasswordConfigChanged
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1584,7 +1584,7 @@ class _$PasswordConfigChanged
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -1608,7 +1608,7 @@ class _$PasswordConfigChanged
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -1621,7 +1621,7 @@ class _$PasswordConfigChanged
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1639,7 +1639,7 @@ class _$PasswordConfigChanged
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -1718,7 +1718,7 @@ class _$GetLevelAndDepartment
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -1731,7 +1731,7 @@ class _$GetLevelAndDepartment
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1749,7 +1749,7 @@ class _$GetLevelAndDepartment
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -1773,7 +1773,7 @@ class _$GetLevelAndDepartment
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -1786,7 +1786,7 @@ class _$GetLevelAndDepartment
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1804,7 +1804,7 @@ class _$GetLevelAndDepartment
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -1872,7 +1872,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -1885,7 +1885,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1903,7 +1903,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -1927,7 +1927,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -1940,7 +1940,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -1958,7 +1958,7 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -2026,7 +2026,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -2039,7 +2039,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -2057,7 +2057,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -2081,7 +2081,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -2094,7 +2094,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -2112,7 +2112,7 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -2180,7 +2180,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
   TResult when<TResult extends Object>({
     @required TResult nameChanged(String name),
     @required TResult emailChanged(String email),
-    @required TResult collageIDChanged(String id),
+    @required TResult collegeIDChanged(String id),
     @required TResult userRoleChanged(String role),
     @required TResult departmentChanged(String department),
     @required TResult levelChanged(String level),
@@ -2193,7 +2193,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -2211,7 +2211,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
   TResult maybeWhen<TResult extends Object>({
     TResult nameChanged(String name),
     TResult emailChanged(String email),
-    TResult collageIDChanged(String id),
+    TResult collegeIDChanged(String id),
     TResult userRoleChanged(String role),
     TResult departmentChanged(String department),
     TResult levelChanged(String level),
@@ -2235,7 +2235,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
   TResult map<TResult extends Object>({
     @required TResult nameChanged(NameChanged value),
     @required TResult emailChanged(EmailChanged value),
-    @required TResult collageIDChanged(CollageIDChanged value),
+    @required TResult collegeIDChanged(CollegeIDChanged value),
     @required TResult userRoleChanged(UserRoleChanged value),
     @required TResult departmentChanged(DepartmentChanged value),
     @required TResult levelChanged(LevelChanged value),
@@ -2248,7 +2248,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
   }) {
     assert(nameChanged != null);
     assert(emailChanged != null);
-    assert(collageIDChanged != null);
+    assert(collegeIDChanged != null);
     assert(userRoleChanged != null);
     assert(departmentChanged != null);
     assert(levelChanged != null);
@@ -2266,7 +2266,7 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
   TResult maybeMap<TResult extends Object>({
     TResult nameChanged(NameChanged value),
     TResult emailChanged(EmailChanged value),
-    TResult collageIDChanged(CollageIDChanged value),
+    TResult collegeIDChanged(CollegeIDChanged value),
     TResult userRoleChanged(UserRoleChanged value),
     TResult departmentChanged(DepartmentChanged value),
     TResult levelChanged(LevelChanged value),
@@ -2305,6 +2305,7 @@ class _$AuthStateTearOff {
       @required Password password,
       @required Password confirmPassword,
       @required bool isSubmiting,
+      @required bool showLoading,
       @required bool showErrorMessage,
       @required Option<Either<FailureMessage, Unit>> authState}) {
     return _AuthState(
@@ -2317,6 +2318,7 @@ class _$AuthStateTearOff {
       password: password,
       confirmPassword: confirmPassword,
       isSubmiting: isSubmiting,
+      showLoading: showLoading,
       showErrorMessage: showErrorMessage,
       authState: authState,
     );
@@ -2338,6 +2340,7 @@ mixin _$AuthState {
   Password get password;
   Password get confirmPassword;
   bool get isSubmiting;
+  bool get showLoading;
   bool get showErrorMessage;
   Option<Either<FailureMessage, Unit>> get authState;
 
@@ -2359,6 +2362,7 @@ abstract class $AuthStateCopyWith<$Res> {
       Password password,
       Password confirmPassword,
       bool isSubmiting,
+      bool showLoading,
       bool showErrorMessage,
       Option<Either<FailureMessage, Unit>> authState});
 }
@@ -2382,6 +2386,7 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
     Object password = freezed,
     Object confirmPassword = freezed,
     Object isSubmiting = freezed,
+    Object showLoading = freezed,
     Object showErrorMessage = freezed,
     Object authState = freezed,
   }) {
@@ -2400,6 +2405,8 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
           : confirmPassword as Password,
       isSubmiting:
           isSubmiting == freezed ? _value.isSubmiting : isSubmiting as bool,
+      showLoading:
+          showLoading == freezed ? _value.showLoading : showLoading as bool,
       showErrorMessage: showErrorMessage == freezed
           ? _value.showErrorMessage
           : showErrorMessage as bool,
@@ -2426,6 +2433,7 @@ abstract class _$AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
       Password password,
       Password confirmPassword,
       bool isSubmiting,
+      bool showLoading,
       bool showErrorMessage,
       Option<Either<FailureMessage, Unit>> authState});
 }
@@ -2450,6 +2458,7 @@ class __$AuthStateCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
     Object password = freezed,
     Object confirmPassword = freezed,
     Object isSubmiting = freezed,
+    Object showLoading = freezed,
     Object showErrorMessage = freezed,
     Object authState = freezed,
   }) {
@@ -2468,6 +2477,8 @@ class __$AuthStateCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
           : confirmPassword as Password,
       isSubmiting:
           isSubmiting == freezed ? _value.isSubmiting : isSubmiting as bool,
+      showLoading:
+          showLoading == freezed ? _value.showLoading : showLoading as bool,
       showErrorMessage: showErrorMessage == freezed
           ? _value.showErrorMessage
           : showErrorMessage as bool,
@@ -2490,6 +2501,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
       @required this.password,
       @required this.confirmPassword,
       @required this.isSubmiting,
+      @required this.showLoading,
       @required this.showErrorMessage,
       @required this.authState})
       : assert(name != null),
@@ -2501,6 +2513,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
         assert(password != null),
         assert(confirmPassword != null),
         assert(isSubmiting != null),
+        assert(showLoading != null),
         assert(showErrorMessage != null),
         assert(authState != null);
 
@@ -2523,13 +2536,15 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
   @override
   final bool isSubmiting;
   @override
+  final bool showLoading;
+  @override
   final bool showErrorMessage;
   @override
   final Option<Either<FailureMessage, Unit>> authState;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AuthState(name: $name, email: $email, collegeID: $collegeID, userRole: $userRole, department: $department, level: $level, password: $password, confirmPassword: $confirmPassword, isSubmiting: $isSubmiting, showErrorMessage: $showErrorMessage, authState: $authState)';
+    return 'AuthState(name: $name, email: $email, collegeID: $collegeID, userRole: $userRole, department: $department, level: $level, password: $password, confirmPassword: $confirmPassword, isSubmiting: $isSubmiting, showLoading: $showLoading, showErrorMessage: $showErrorMessage, authState: $authState)';
   }
 
   @override
@@ -2546,6 +2561,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
       ..add(DiagnosticsProperty('password', password))
       ..add(DiagnosticsProperty('confirmPassword', confirmPassword))
       ..add(DiagnosticsProperty('isSubmiting', isSubmiting))
+      ..add(DiagnosticsProperty('showLoading', showLoading))
       ..add(DiagnosticsProperty('showErrorMessage', showErrorMessage))
       ..add(DiagnosticsProperty('authState', authState));
   }
@@ -2578,6 +2594,9 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
             (identical(other.isSubmiting, isSubmiting) ||
                 const DeepCollectionEquality()
                     .equals(other.isSubmiting, isSubmiting)) &&
+            (identical(other.showLoading, showLoading) ||
+                const DeepCollectionEquality()
+                    .equals(other.showLoading, showLoading)) &&
             (identical(other.showErrorMessage, showErrorMessage) ||
                 const DeepCollectionEquality()
                     .equals(other.showErrorMessage, showErrorMessage)) &&
@@ -2598,6 +2617,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
       const DeepCollectionEquality().hash(password) ^
       const DeepCollectionEquality().hash(confirmPassword) ^
       const DeepCollectionEquality().hash(isSubmiting) ^
+      const DeepCollectionEquality().hash(showLoading) ^
       const DeepCollectionEquality().hash(showErrorMessage) ^
       const DeepCollectionEquality().hash(authState);
 
@@ -2618,6 +2638,7 @@ abstract class _AuthState implements AuthState {
       @required Password password,
       @required Password confirmPassword,
       @required bool isSubmiting,
+      @required bool showLoading,
       @required bool showErrorMessage,
       @required Option<Either<FailureMessage, Unit>> authState}) = _$_AuthState;
 
@@ -2639,6 +2660,8 @@ abstract class _AuthState implements AuthState {
   Password get confirmPassword;
   @override
   bool get isSubmiting;
+  @override
+  bool get showLoading;
   @override
   bool get showErrorMessage;
   @override

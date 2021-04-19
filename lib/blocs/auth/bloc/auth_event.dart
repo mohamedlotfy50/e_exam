@@ -5,7 +5,7 @@ abstract class AuthEvent with _$AuthEvent {
   const factory AuthEvent.nameChanged(String name) = NameChanged;
 
   const factory AuthEvent.emailChanged(String email) = EmailChanged;
-  const factory AuthEvent.collageIDChanged(String id) = CollageIDChanged;
+  const factory AuthEvent.collegeIDChanged(String id) = CollegeIDChanged;
   const factory AuthEvent.userRoleChanged(String role) = UserRoleChanged;
   const factory AuthEvent.departmentChanged(String department) =
       DepartmentChanged;
