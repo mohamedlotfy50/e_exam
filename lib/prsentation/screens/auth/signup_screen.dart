@@ -44,6 +44,21 @@ class SignUpScreen extends StatelessWidget {
                         .getTheErrorMessage();
                   },
                 ),
+                TextFormField(
+                  decoration: InputDecoration(hintText: 'collegeId'),
+                  onChanged: (id) {
+                    context
+                        .read<AuthBloc>()
+                        .add(AuthEvent.collegeIDChanged(id));
+                  },
+                  validator: (_) {
+                    return context
+                        .read<AuthBloc>()
+                        .state
+                        .collegeID
+                        .getTheErrorMessage();
+                  },
+                ),
                 DropdownButton<String>(
                   onChanged: (role) {
                     context.read<AuthBloc>().add(UserRoleChanged(role));
@@ -61,13 +76,17 @@ class SignUpScreen extends StatelessWidget {
                     onChanged: (level) {
                       context.read<AuthBloc>().add(LevelChanged(level));
                     },
-                    items: state.level.levels
+                    items: context
+                        .read<AuthBloc>()
+                        .state
+                        .level
+                        .levels
                         .map((e) => DropdownMenuItem<String>(
                               child: Text(e),
                               value: e,
                             ))
                         .toList(),
-                    value: state.level.selectedLevel,
+                    value: context.read<AuthBloc>().state.level.selectedLevel,
                   ),
                 if (!state.userRole.isAdmin())
                   DropdownButton<String>(
@@ -77,10 +96,12 @@ class SignUpScreen extends StatelessWidget {
                           .add(DepartmentChanged(department));
                     },
                     items: state.department.departments
-                        .map((e) => DropdownMenuItem<String>(
-                              child: Text(e),
-                              value: e,
-                            ))
+                        .map(
+                          (e) => DropdownMenuItem<String>(
+                            child: Text(e.toString()),
+                            value: e.toString(),
+                          ),
+                        )
                         .toList(),
                     value: state.department.selectedDepartment,
                   ),
@@ -106,9 +127,9 @@ class SignUpScreen extends StatelessWidget {
                     return context
                         .read<AuthBloc>()
                         .state
-                        .password
+                        .confirmPassword
                         .isEqualErrorMessage(
-                            context.read<AuthBloc>().state.confirmPassword);
+                            context.read<AuthBloc>().state.password);
                   },
                 ),
                 IgnorePointer(

@@ -15,7 +15,7 @@ class CollegeID {
 }
 
 Either<FailureMessage, String> _idValidator(String id) {
-  bool _isvalid = RegExp(r"^[0-9]{1,16}$").hasMatch(id);
+  bool _isvalid = RegExp(r"^[0-9]{16}$").hasMatch(id);
 
   if (_isvalid) {
     return right(id);

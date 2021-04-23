@@ -13,5 +13,5 @@ class Level {
     }
   }
 
-  Level(this.selectedLevel, {this.levels});
+  Level(this.selectedLevel, {this.levels = const []});
 }

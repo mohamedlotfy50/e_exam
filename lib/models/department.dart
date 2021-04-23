@@ -14,5 +14,5 @@ class Department {
     }
   }
 
-  Department(this.selectedDepartment, {this.departments});
+  Department(this.selectedDepartment, {this.departments = const []});
 }

@@ -39,12 +39,14 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             yield state.copyWith(
                 department: _authRepository.getCorrospondingDeprtments(
                     _authRepository.getLevels().selectedLevel),
-                level: _authRepository.getLevels());
+                level: _authRepository.getLevels(),
+                showLoading: false);
           } else {
-            yield state.copyWith(department: _authRepository.getDeprtments());
+            yield state.copyWith(
+                department: _authRepository.getDeprtments(),
+                showLoading: false);
           }
         }
-        yield state.copyWith(showLoading: false);
       },
       nameChanged: (e) async* {
         yield state.copyWith(name: Name(e.name));
@@ -57,9 +59,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       },
       userRoleChanged: (e) async* {
         yield state.copyWith(
-            userRole: UserRole(e.role),
-            level: Level(null),
-            department: Department(null));
+          userRole: UserRole(e.role),
+          level: Level(
+            null,
+          ),
+          department: Department(null),
+        );
         this.add(GetLevelAndDepartment());
       },
       departmentChanged: (e) async* {

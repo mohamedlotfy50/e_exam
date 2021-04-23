@@ -14,14 +14,14 @@ class Password {
   }
 
   String isEqualErrorMessage(Password obj) {
-    if (_value != obj._value && _value.isRight() && obj.isValid()) {
+    if (_value != obj._value && obj.isValid()) {
       return 'password does not match';
     }
     return null;
   }
 
   bool isEqual(Password obj) {
-    if (_value != obj._value && _value.isRight() && obj.isValid()) {
+    if (_value != obj._value && obj.isValid()) {
       return false;
     }
     return true;
