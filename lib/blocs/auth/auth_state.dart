@@ -14,7 +14,7 @@ abstract class AuthState with _$AuthState {
     @required bool isSubmiting,
     @required bool showLoading,
     @required bool showErrorMessage,
-    @required Option<Either<FailureMessage, Unit>> authState,
+    @required Option<Either<FailureMessage, User>> authState,
   }) = _AuthState;
   factory AuthState.inistial() => AuthState(
         authState: none(),

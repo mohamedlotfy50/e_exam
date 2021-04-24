@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
-import 'package:firebase_auth/firebase_auth.dart' hide User;
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import '../../../models/user.dart' as my;
 
 class Authentication {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
@@ -39,5 +40,20 @@ class Authentication {
       await _firestore.collection('request').doc(id).set(data);
     }
   }
-  //TODO 1: check if the user is already signed in
+
+  Future<my.User> getSignedInUser() async {
+    final User _userState = _firebaseAuth.currentUser;
+    if (_userState != null) {
+      final my.User _user = await getUser(_userState.uid);
+      return _user;
+    } else {
+      return null;
+    }
+  }
+
+  Future<my.User> getUser(String uuid) async {
+    final DocumentSnapshot _userDoc =
+        await _firestore.collection('users').doc(uuid).get();
+    return my.User.fromJson(_userDoc.data());
+  }
 }

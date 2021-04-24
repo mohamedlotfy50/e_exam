@@ -1,15 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
-import 'package:e_exam/data/auth/provider/firebase_auth.dart';
-import 'package:e_exam/models/department.dart';
-import 'package:e_exam/models/failure_message.dart';
-import 'package:e_exam/models/level.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import '../../../models/department.dart';
 import '../../../models/email.dart';
 import '../../../models/failure_message.dart';
+import '../../../models/level.dart';
 import '../../../models/password.dart';
 import '../../../models/user.dart' as my;
+import '../provider/firebase_auth.dart';
 
 //TODO 2: handling all errors that could happned
 class AuthRepository {
@@ -19,16 +18,16 @@ class AuthRepository {
   List<String> _departments = [];
   Map<String, Department> _studentDepartments = {};
 
-  Future<Either<FailureMessage, Unit>> signIn(
+  Future<Either<FailureMessage, my.User>> signIn(
       Email email, Password password) async {
     try {
       final UserCredential _credential = await _authentication.signIn(
           email: email.getValueOrNull(), password: password.getValueOrNull());
-      print('done ${_credential.user.uid}');
-      return right(unit);
+      final my.User _user = await _authentication.getUser(_credential.user.uid);
+      return right(_user);
     } on FirebaseException catch (e) {
       print('Failed ${e.message}');
-      return left(FailureMessage(body: e.message));
+      return left(FailureMessage(title: e.plugin, body: e.message));
     }
   }
 
@@ -61,13 +60,21 @@ class AuthRepository {
     }
   }
 
-  Future<Either<FailureMessage, Unit>> requestSignIn(my.User user) async {
+  Future<Either<FailureMessage, my.User>> requestSignUp(my.User user) async {
     try {
       await _authentication.requestSignUp(user.toJson(), user.uid);
       print('done');
-      return right(unit);
+      return right(user);
     } on FirebaseException catch (e) {
       return left(FailureMessage(title: e.plugin, body: e.message));
     }
+  }
+
+  Future<Option<my.User>> getSignedInUser() async {
+    final my.User _user = await _authentication.getSignedInUser();
+    if (_user != null) {
+      return some(_user);
+    }
+    return none();
   }
 }

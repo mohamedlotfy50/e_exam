@@ -1,11 +1,12 @@
-import 'package:e_exam/models/department.dart';
-import 'package:e_exam/models/email.dart';
-import 'package:e_exam/models/id.dart';
-import 'package:e_exam/models/level.dart';
-import 'package:e_exam/models/name.dart';
-import 'package:e_exam/models/password.dart';
-import 'package:e_exam/models/roles.dart';
 import 'package:flutter/foundation.dart';
+
+import 'department.dart';
+import 'email.dart';
+import 'id.dart';
+import 'level.dart';
+import 'name.dart';
+import 'password.dart';
+import 'roles.dart';
 
 class User {
   final String uid;

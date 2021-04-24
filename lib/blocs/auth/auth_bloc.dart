@@ -2,24 +2,24 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:e_exam/models/name.dart';
-import 'package:e_exam/models/user.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';
 
-import '../../../data/auth/repository/auth_repository.dart';
-import '../../../models/department.dart';
-import '../../../models/email.dart';
-import '../../../models/failure_message.dart';
-import '../../../models/id.dart';
-import '../../../models/level.dart';
-import '../../../models/password.dart';
-import '../../../models/roles.dart';
+import '../../data/auth/repository/auth_repository.dart';
+import '../../models/department.dart';
+import '../../models/email.dart';
+import '../../models/failure_message.dart';
+import '../../models/id.dart';
+import '../../models/level.dart';
+import '../../models/name.dart';
+import '../../models/password.dart';
+import '../../models/roles.dart';
+import '../../models/user.dart';
 
+part 'auth_bloc.freezed.dart';
 part 'auth_event.dart';
 part 'auth_state.dart';
-part 'auth_bloc.freezed.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository _authRepository = AuthRepository();
@@ -105,7 +105,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           authState: none(),
         );
         if (state.email.isValid() && state.password.isValid()) {
-          final Either<FailureMessage, Unit> _signin =
+          final Either<FailureMessage, User> _signin =
               await _authRepository.signIn(state.email, state.password);
           yield state.copyWith(
             isSubmiting: false,
@@ -138,7 +138,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
         if (_user.isValidUser() &&
             state.confirmPassword.isEqual(state.password)) {
-          final _state = await _authRepository.requestSignIn(_user);
+          final _state = await _authRepository.requestSignUp(_user);
           yield state.copyWith(
             isSubmiting: false,
             showErrorMessage: false,

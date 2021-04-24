@@ -1,11 +1,12 @@
-import 'package:e_exam/firbase_wrapper.dart';
-import 'package:e_exam/prsentation/screens/auth/auth_wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'blocs/auth/bloc/auth_bloc.dart';
+import 'blocs/auth/auth_bloc.dart';
+import 'firbase_wrapper.dart';
+import 'prsentation/screens/auth/auth_wrapper.dart';
 
 class MyApp extends StatelessWidget {
   @override

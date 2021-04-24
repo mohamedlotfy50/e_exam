@@ -1,5 +1,5 @@
-import 'package:e_exam/prsentation/screens/auth/signin_screen.dart';
-import 'package:e_exam/prsentation/screens/auth/signup_screen.dart';
+import 'signin_screen.dart';
+import 'signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class WebScreen extends StatelessWidget {

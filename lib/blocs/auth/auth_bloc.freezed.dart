@@ -2307,7 +2307,7 @@ class _$AuthStateTearOff {
       @required bool isSubmiting,
       @required bool showLoading,
       @required bool showErrorMessage,
-      @required Option<Either<FailureMessage, Unit>> authState}) {
+      @required Option<Either<FailureMessage, User>> authState}) {
     return _AuthState(
       name: name,
       email: email,
@@ -2342,7 +2342,7 @@ mixin _$AuthState {
   bool get isSubmiting;
   bool get showLoading;
   bool get showErrorMessage;
-  Option<Either<FailureMessage, Unit>> get authState;
+  Option<Either<FailureMessage, User>> get authState;
 
   @JsonKey(ignore: true)
   $AuthStateCopyWith<AuthState> get copyWith;
@@ -2364,7 +2364,7 @@ abstract class $AuthStateCopyWith<$Res> {
       bool isSubmiting,
       bool showLoading,
       bool showErrorMessage,
-      Option<Either<FailureMessage, Unit>> authState});
+      Option<Either<FailureMessage, User>> authState});
 }
 
 /// @nodoc
@@ -2412,7 +2412,7 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
           : showErrorMessage as bool,
       authState: authState == freezed
           ? _value.authState
-          : authState as Option<Either<FailureMessage, Unit>>,
+          : authState as Option<Either<FailureMessage, User>>,
     ));
   }
 }
@@ -2435,7 +2435,7 @@ abstract class _$AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
       bool isSubmiting,
       bool showLoading,
       bool showErrorMessage,
-      Option<Either<FailureMessage, Unit>> authState});
+      Option<Either<FailureMessage, User>> authState});
 }
 
 /// @nodoc
@@ -2484,7 +2484,7 @@ class __$AuthStateCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
           : showErrorMessage as bool,
       authState: authState == freezed
           ? _value.authState
-          : authState as Option<Either<FailureMessage, Unit>>,
+          : authState as Option<Either<FailureMessage, User>>,
     ));
   }
 }
@@ -2540,7 +2540,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
   @override
   final bool showErrorMessage;
   @override
-  final Option<Either<FailureMessage, Unit>> authState;
+  final Option<Either<FailureMessage, User>> authState;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -2640,7 +2640,7 @@ abstract class _AuthState implements AuthState {
       @required bool isSubmiting,
       @required bool showLoading,
       @required bool showErrorMessage,
-      @required Option<Either<FailureMessage, Unit>> authState}) = _$_AuthState;
+      @required Option<Either<FailureMessage, User>> authState}) = _$_AuthState;
 
   @override
   Name get name;
@@ -2665,7 +2665,7 @@ abstract class _AuthState implements AuthState {
   @override
   bool get showErrorMessage;
   @override
-  Option<Either<FailureMessage, Unit>> get authState;
+  Option<Either<FailureMessage, User>> get authState;
   @override
   @JsonKey(ignore: true)
   _$AuthStateCopyWith<_AuthState> get copyWith;
