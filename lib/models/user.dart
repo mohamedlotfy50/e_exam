@@ -49,8 +49,8 @@ class User {
         'email': email.getValueOrNull(),
         'user role': role.role,
         'college id': collegeID.getValueOrNull(),
-        'level': level.selectedLevel,
-        'department': department.selectedDepartment,
+        'level': level.selectedLevel ?? '',
+        'department': department.selectedDepartment ?? '',
         'password': password.getValueOrNull(),
       };
 

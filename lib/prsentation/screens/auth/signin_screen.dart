@@ -1,3 +1,4 @@
+import 'package:e_exam/prsentation/screens/home/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,7 +13,15 @@ class SignInScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 18),
       child: BlocConsumer<AuthBloc, AuthState>(
         bloc: context.read<AuthBloc>(),
-        listener: (context, state) {},
+        listener: (context, state) {
+          state.authState.fold(
+              () {},
+              (a) => a.fold(
+                  (l) {},
+                  (r) => Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                          builder: (context) => HomePage(user: r)))));
+        },
         builder: (context, state) {
           return Form(
             autovalidateMode: state.showErrorMessage

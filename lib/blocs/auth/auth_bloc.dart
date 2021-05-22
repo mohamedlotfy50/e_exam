@@ -113,11 +113,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             authState: some(_signin),
           );
         }
-        yield state.copyWith(
-          isSubmiting: false,
-          showErrorMessage: true,
-          authState: none(),
-        );
       },
       signUp: (e) async* {
         yield state.copyWith(

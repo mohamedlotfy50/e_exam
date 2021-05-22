@@ -23,7 +23,8 @@ class AuthRepository {
     try {
       final UserCredential _credential = await _authentication.signIn(
           email: email.getValueOrNull(), password: password.getValueOrNull());
-      final my.User _user = await _authentication.getUser(_credential.user.uid);
+      final my.User _user =
+          await _authentication.getUser(_credential?.user?.uid);
       return right(_user);
     } on FirebaseException catch (e) {
       print('Failed ${e.message}');
