@@ -138,7 +138,7 @@ class SignUpScreen extends StatelessWidget {
                     onPressed: () {
                       context.read<AuthBloc>().add(SignUp());
                     },
-                    child: Text('Sign in'),
+                    child: Text('Sign up'),
                   ),
                 )
               ],

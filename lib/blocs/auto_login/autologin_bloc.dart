@@ -22,7 +22,6 @@ class AutologinBloc extends Bloc<AutologinEvent, AutologinState> {
     yield* event.map(
       checkToken: (e) async* {
         final Option<User> isLogedIn = await _authRepository.getSignedInUser();
-        print(isLogedIn);
         yield isLogedIn.fold(() => _NotSignedIn(), (user) => _SignedIn(user));
       },
     );

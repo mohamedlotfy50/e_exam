@@ -1,4 +1,6 @@
+import 'package:e_exam/app.dart';
 import 'package:e_exam/models/user.dart';
+import 'package:e_exam/prsentation/screens/add_exam/add_exam.dart';
 import 'package:e_exam/prsentation/screens/all_users/all_users.dart';
 import 'package:e_exam/prsentation/screens/requests/requestes.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide User;
@@ -33,10 +35,20 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+            if (user.role.isDoctor())
+              ListTile(
+                  title: Text('add exam'),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => AddingExam(),
+                    ));
+                  }),
             ListTile(
                 title: Text('sign out'),
                 onTap: () {
                   FirebaseAuth.instance.signOut();
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => MyApp()));
                 }),
           ],
         ),

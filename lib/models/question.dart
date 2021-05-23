@@ -1,6 +1,8 @@
-class Question {
-  final String question;
-  final Map<String, int> answers;
+import 'package:flutter/foundation.dart';
 
-  Question({this.question, this.answers});
+class Question {
+  String question;
+  Map<String, int> answers;
+
+  Question({@required this.question, @required this.answers});
 }

@@ -133,12 +133,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
         if (_user.isValidUser() &&
             state.confirmPassword.isEqual(state.password)) {
-          final _state = await _authRepository.requestSignUp(_user);
-          yield state.copyWith(
-            isSubmiting: false,
-            showErrorMessage: false,
-            authState: some(_state),
-          );
+          await _authRepository.requestSignUp(_user);
         }
         yield state.copyWith(
           isSubmiting: false,

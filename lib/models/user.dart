@@ -51,7 +51,7 @@ class User {
         'college id': collegeID.getValueOrNull(),
         'level': level.selectedLevel ?? '',
         'department': department.selectedDepartment ?? '',
-        'password': password.getValueOrNull(),
+        'password': password.getValueOrNull() ?? '',
       };
 
   factory User.fromJson(Map<String, dynamic> json) => User(
