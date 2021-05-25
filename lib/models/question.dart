@@ -4,14 +4,14 @@ class Question {
   final String rank;
 
   final String question;
-  final Map<String, int> answers;
+  final Map<String, dynamic> answers;
 
   Question(
       {@required this.question, @required this.answers, @required this.rank});
 
   factory Question.fromJson(Map<String, dynamic> json) {
     return Question(
-        question: json['question'],
+        question: json['question'] as String,
         answers: json['answers'],
         rank: json['rank']);
   }
@@ -28,6 +28,15 @@ class Question {
     List<Map<String, dynamic>> cache = [];
     qs.forEach((element) {
       cache.add(element.toJson());
+    });
+    return cache;
+  }
+
+  static List<Map<String, dynamic>> fromListOfmap(
+      List<Map<String, dynamic>> qs) {
+    List<Map<String, dynamic>> cache = [];
+    qs.forEach((element) {
+      cache.add(Question.fromJson(element).toJson());
     });
     return cache;
   }

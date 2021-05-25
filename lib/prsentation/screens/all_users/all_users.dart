@@ -22,8 +22,10 @@ class AllUsers extends StatelessWidget {
                 .snapshots()
             : FirebaseFirestore.instance
                 .collection('users')
-                .where('uid', isNotEqualTo: uid)
-                .where('user role', isEqualTo: 'Student')
+                .where(
+                  'user role',
+                  isEqualTo: 'Student',
+                )
                 .where('department', isEqualTo: department)
                 .snapshots(),
         builder: (context, snapshot) {

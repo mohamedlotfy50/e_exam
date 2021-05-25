@@ -78,28 +78,35 @@ class _SetExamState extends State<SetExam> {
                   ),
                   ElevatedButton(
                       onPressed: () async {
-                        // final t = DateTime.now();
-                        // final d =
-                        //     t.add(Duration(hours: int.parse(duration.text)));
+                        final t = DateTime.now();
+                        final d =
+                            t.add(Duration(hours: int.parse(duration.text)));
                         final ds = await FirebaseFirestore.instance
                             .collection('bank')
                             .doc('$value-${widget.department}')
                             .get();
-                        // if(docs.exists){
-                        //   await FirebaseFirestore.instance
-                        //     .collection('exams')
-                        //     .doc('$value-${widget.department}')
-                        //     .set(Exam(title.text,docs.data().containsKey('questions'), '$d').toJson());
-                        // }
+
                         if (ds.exists) {
-                          List<Question> qs = [];
+                          List<Map> qs = [];
 
                           final List<dynamic> sa = ds.data()['questions'];
                           sa.forEach((element) {
-                            qs.add(Question.fromJson(element));
+                            if (element['rank'] == rank.text) {
+                              qs.add(element);
+                            }
                           });
-                          print('exist');
-                          print(qs);
+                          if (qs.isNotEmpty) {
+                            final dds = await FirebaseFirestore.instance
+                                .collection('exams')
+                                .doc('$value-${widget.department}')
+                                .set({
+                              'exam': qs,
+                              'duration': d,
+                              'title': title.text,
+                              'attended': []
+                            });
+                            Navigator.of(context).pop();
+                          }
                         } else {
                           print('dosnt exist');
                         }

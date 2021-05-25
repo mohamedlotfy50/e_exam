@@ -5,7 +5,7 @@ class LoadingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('loading....'),
+        child: Text('back end is loading....'),
       ),
     );
   }

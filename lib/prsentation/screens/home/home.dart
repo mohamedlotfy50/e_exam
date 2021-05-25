@@ -2,6 +2,7 @@ import 'package:e_exam/app.dart';
 import 'package:e_exam/models/user.dart';
 import 'package:e_exam/prsentation/screens/add_exam/add_exam.dart';
 import 'package:e_exam/prsentation/screens/all_users/all_users.dart';
+import 'package:e_exam/prsentation/screens/my_exams/my_exams.dart';
 import 'package:e_exam/prsentation/screens/requests/requestes.dart';
 import 'package:e_exam/prsentation/set_exam/set_exam.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide User;
@@ -53,6 +54,18 @@ class HomePage extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => SetExam(
+                        department: user.department.selectedDepartment,
+                      ),
+                    ));
+                  }),
+            if (user.role.isStudent())
+              ListTile(
+                  title: Text('My Exams'),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => MyExams(
+                        id: user.uid,
+                        level: user.level.selectedLevel,
                         department: user.department.selectedDepartment,
                       ),
                     ));
