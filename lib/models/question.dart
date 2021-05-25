@@ -1,8 +1,34 @@
 import 'package:flutter/foundation.dart';
 
 class Question {
-  String question;
-  Map<String, int> answers;
+  final String rank;
 
-  Question({@required this.question, @required this.answers});
+  final String question;
+  final Map<String, int> answers;
+
+  Question(
+      {@required this.question, @required this.answers, @required this.rank});
+
+  factory Question.fromJson(Map<String, dynamic> json) {
+    return Question(
+        question: json['question'],
+        answers: json['answers'],
+        rank: json['rank']);
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'question': question,
+      'answers': answers,
+      'rank': rank,
+    };
+  }
+
+  static List<Map<String, dynamic>> fromListOfQuestions(List<Question> qs) {
+    List<Map<String, dynamic>> cache = [];
+    qs.forEach((element) {
+      cache.add(element.toJson());
+    });
+    return cache;
+  }
 }

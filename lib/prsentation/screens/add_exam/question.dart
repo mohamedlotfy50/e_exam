@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class QuestionCard extends StatelessWidget {
   final TextEditingController questioncontroller = TextEditingController();
+  final TextEditingController rank = TextEditingController();
+
   final TextEditingController answer1 = TextEditingController();
   final TextEditingController answer2 = TextEditingController();
   final TextEditingController answer3 = TextEditingController();
@@ -23,9 +25,24 @@ class QuestionCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          TextField(
-            controller: questioncontroller,
-            decoration: InputDecoration(hintText: 'type the question here'),
+          Row(
+            children: [
+              Expanded(
+                flex: 3,
+                child: TextField(
+                  controller: questioncontroller,
+                  decoration:
+                      InputDecoration(hintText: 'type the question here'),
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: TextField(
+                  controller: rank,
+                  decoration: InputDecoration(hintText: 'Question rank'),
+                ),
+              )
+            ],
           ),
           Answersfiled(answer: answer1, score: score1),
           Answersfiled(answer: answer2, score: score2),

@@ -5,7 +5,8 @@ class AllUsers extends StatelessWidget {
   final bool isAdmin;
   final String uid;
   final String department;
-  const AllUsers({Key key, this.isAdmin = false, this.uid, this.department})
+  const AllUsers(
+      {Key key, this.isAdmin = false, this.uid, @required this.department})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,11 @@ class AllUsers extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(
               child: Text('loading'),
+            );
+          }
+          if (snapshot.hasError) {
+            return Center(
+              child: Text('there are no ${isAdmin ? 'users' : 'students'} yet'),
             );
           }
           return ListView.builder(

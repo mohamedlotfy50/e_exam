@@ -3,6 +3,7 @@ import 'package:e_exam/models/user.dart';
 import 'package:e_exam/prsentation/screens/add_exam/add_exam.dart';
 import 'package:e_exam/prsentation/screens/all_users/all_users.dart';
 import 'package:e_exam/prsentation/screens/requests/requestes.dart';
+import 'package:e_exam/prsentation/set_exam/set_exam.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:flutter/material.dart';
 
@@ -22,9 +23,10 @@ class HomePage extends StatelessWidget {
                 onTap: () => Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => Requestes())),
               ),
-            if (user.role.isAdmin())
+            if (user.role.isAdmin() || user.role.isDoctor())
               ListTile(
-                title: Text('Show all users'),
+                title: Text(
+                    'Show ${user.role.isAdmin() ? 'all users' : 'my students'}'),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => AllUsers(
@@ -37,10 +39,22 @@ class HomePage extends StatelessWidget {
               ),
             if (user.role.isDoctor())
               ListTile(
-                  title: Text('add exam'),
+                  title: Text('add to question bank'),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => AddingExam(),
+                      builder: (context) => AddingExam(
+                        department: user.department.selectedDepartment,
+                      ),
+                    ));
+                  }),
+            if (user.role.isDoctor())
+              ListTile(
+                  title: Text('set and exam'),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => SetExam(
+                        department: user.department.selectedDepartment,
+                      ),
                     ));
                   }),
             ListTile(
