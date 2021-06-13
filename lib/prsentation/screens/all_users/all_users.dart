@@ -5,14 +5,13 @@ class AllUsers extends StatelessWidget {
   final bool isAdmin;
   final String uid;
   final String department;
-  const AllUsers(
-      {Key key, this.isAdmin = false, this.uid, @required this.department})
+  const AllUsers({Key key, this.isAdmin = false, this.uid, this.department})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('all users'),
+        title: Text('my students'),
       ),
       body: StreamBuilder<QuerySnapshot>(
         stream: isAdmin

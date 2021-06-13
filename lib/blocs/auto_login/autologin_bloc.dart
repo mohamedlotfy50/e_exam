@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:e_exam/data/auth/repository/auth_repository.dart';
-import 'package:e_exam/models/user.dart';
+import '../../data/auth/repository/auth_repository.dart';
+import '../../models/user.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'autologin_event.dart';

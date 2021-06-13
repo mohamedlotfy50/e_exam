@@ -1,4 +1,4 @@
-import 'package:e_exam/prsentation/screens/home/home.dart';
+import '../home/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,7 +9,7 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.yellow,
+      color: Colors.black26,
       padding: EdgeInsets.symmetric(horizontal: 18),
       child: BlocConsumer<AuthBloc, AuthState>(
         bloc: context.read<AuthBloc>(),
@@ -31,6 +31,7 @@ class SignInScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 TextFormField(
+                  decoration: InputDecoration(hintText: 'Email'),
                   onChanged: (email) {
                     context.read<AuthBloc>().add(EmailChanged(email));
                   },
@@ -43,6 +44,7 @@ class SignInScreen extends StatelessWidget {
                   },
                 ),
                 TextFormField(
+                  decoration: InputDecoration(hintText: 'password'),
                   onChanged: (password) {
                     context.read<AuthBloc>().add(PasswordChanged(password));
                   },

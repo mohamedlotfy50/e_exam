@@ -6,7 +6,8 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey,
+      color: Colors.black26,
+      padding: EdgeInsets.symmetric(horizontal: 20),
       child: BlocConsumer<AuthBloc, AuthState>(
         bloc: context.read<AuthBloc>(),
         listener: (context, state) {},

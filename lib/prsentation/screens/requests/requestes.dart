@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:e_exam/models/department.dart';
-import 'package:e_exam/models/email.dart';
-import 'package:e_exam/models/id.dart';
-import 'package:e_exam/models/level.dart';
-import 'package:e_exam/models/name.dart';
-import 'package:e_exam/models/password.dart';
-import 'package:e_exam/models/roles.dart';
-import 'package:e_exam/models/user.dart';
+import '../../../models/department.dart';
+import '../../../models/email.dart';
+import '../../../models/id.dart';
+import '../../../models/level.dart';
+import '../../../models/name.dart';
+import '../../../models/password.dart';
+import '../../../models/roles.dart';
+import '../../../models/user.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:flutter/material.dart';
 

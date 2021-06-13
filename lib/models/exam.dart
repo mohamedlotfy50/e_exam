@@ -1,4 +1,4 @@
-import 'package:e_exam/models/question.dart';
+import 'question.dart';
 
 class Exam {
   final String title;

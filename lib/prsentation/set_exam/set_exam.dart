@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:e_exam/models/exam.dart';
-import 'package:e_exam/models/question.dart';
+import '../../models/exam.dart';
+import '../../models/question.dart';
 import 'package:flutter/material.dart';
 
 class SetExam extends StatefulWidget {

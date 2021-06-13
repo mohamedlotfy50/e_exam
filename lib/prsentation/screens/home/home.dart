@@ -1,10 +1,10 @@
-import 'package:e_exam/app.dart';
-import 'package:e_exam/models/user.dart';
-import 'package:e_exam/prsentation/screens/add_exam/add_exam.dart';
-import 'package:e_exam/prsentation/screens/all_users/all_users.dart';
-import 'package:e_exam/prsentation/screens/my_exams/my_exams.dart';
-import 'package:e_exam/prsentation/screens/requests/requestes.dart';
-import 'package:e_exam/prsentation/set_exam/set_exam.dart';
+import '../../../app.dart';
+import '../../../models/user.dart';
+import '../add_exam/add_exam.dart';
+import '../all_users/all_users.dart';
+import '../my_exams/my_exams.dart';
+import '../requests/requestes.dart';
+import '../../set_exam/set_exam.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:flutter/material.dart';
 

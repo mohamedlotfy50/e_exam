@@ -1,6 +1,6 @@
-import 'package:e_exam/blocs/auth/auth_bloc.dart';
-import 'package:e_exam/blocs/auto_login/autologin_bloc.dart';
-import 'package:e_exam/prsentation/screens/home/home.dart';
+import '../../../blocs/auth/auth_bloc.dart';
+import '../../../blocs/auto_login/autologin_bloc.dart';
+import '../home/home.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'signin_screen.dart';
