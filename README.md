@@ -4,7 +4,7 @@ A system for university to mange the educational process
 
 ## Supported platforms
 - [x] Android
-- [-] Web
-- [-] IOS
-- [-] Windows
-- [-] MACOS
+- [ ] Web
+- [ ] IOS
+- [ ] Windows
+- [ ] MACOS
