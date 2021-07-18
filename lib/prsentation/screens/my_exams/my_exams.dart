@@ -2,12 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class MyExams extends StatelessWidget {
-  final String level;
-  final String department;
-  final String id;
+  final String? level;
+  final String? department;
+  final String? id;
 
   const MyExams(
-      {Key key, @required this.level, @required this.department, this.id})
+      {Key? key, required this.level, required this.department, this.id})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -41,11 +41,11 @@ class MyExams extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text((snapshot.data.data()['title']).toString()),
-                    !(snapshot.data.data()['attended'] as List).contains(id)
-                        ? ElevatedButton(onPressed: () {}, child: Text('enter'))
-                        : ElevatedButton(
-                            onPressed: null, child: Text('you have attended'))
+                    // Text((snapshot.data.data()['title']).toString()),
+                    // !(snapshot.data.data()['attended'] as List).contains(id)
+                    //     ? ElevatedButton(onPressed: () {}, child: Text('enter'))
+                    //     : ElevatedButton(
+                    //         onPressed: null, child: Text('you have attended'))
                   ],
                 ),
               );

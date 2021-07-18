@@ -5,8 +5,8 @@ import 'failure_message.dart';
 class CollegeID {
   final Either<FailureMessage, String> _value;
 
-  String getValueOrNull() => _value.fold((l) => null, id);
-  String getTheErrorMessage() => _value.fold((l) => l.body, (r) => null);
+  String? getValueOrNull() => _value.fold((l) => null, id);
+  String? getTheErrorMessage() => _value.fold((l) => l.body, (r) => null);
   bool isValid() => _value.isRight();
   CollegeID._(this._value);
   factory CollegeID(String id) {

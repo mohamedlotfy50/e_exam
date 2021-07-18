@@ -4,8 +4,8 @@ import 'failure_message.dart';
 
 class Email {
   final Either<FailureMessage, String> _value;
-  String getValueOrNull() => _value.fold((l) => null, id);
-  String getTheErrorMessage() => _value.fold((l) => l.body, (r) => null);
+  String? getValueOrNull() => _value.fold((l) => null, id);
+  String? getTheErrorMessage() => _value.fold((l) => l.body, (r) => null);
   bool isValid() => _value.isRight();
 
   Email._(this._value);

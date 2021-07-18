@@ -4,15 +4,15 @@ import '../../models/question.dart';
 import 'package:flutter/material.dart';
 
 class SetExam extends StatefulWidget {
-  final String department;
+  final String? department;
 
-  const SetExam({Key key, @required this.department}) : super(key: key);
+  const SetExam({Key? key, required this.department}) : super(key: key);
   @override
   _SetExamState createState() => _SetExamState();
 }
 
 class _SetExamState extends State<SetExam> {
-  String value = '';
+  String? value = '';
   List<String> levels = [];
   final TextEditingController duration = TextEditingController();
   final TextEditingController title = TextEditingController();
@@ -38,7 +38,7 @@ class _SetExamState extends State<SetExam> {
                           .doc('dRMg7c6WTiyPv8Cyhu9j')
                           .get();
 
-                      x.data()['levels&departments'].forEach((key, value) {
+                      x.data()!['levels&departments'].forEach((key, value) {
                         levels.add(key);
                       });
                       setState(() {
@@ -51,7 +51,7 @@ class _SetExamState extends State<SetExam> {
               Column(
                 children: [
                   DropdownButton(
-                    onChanged: (e) {
+                    onChanged: (dynamic e) {
                       setState(() {
                         value = e;
                       });
@@ -89,7 +89,7 @@ class _SetExamState extends State<SetExam> {
                         if (ds.exists) {
                           List<Map> qs = [];
 
-                          final List<dynamic> sa = ds.data()['questions'];
+                          final List<dynamic> sa = ds.data()!['questions'];
                           sa.forEach((element) {
                             if (element['rank'] == rank.text) {
                               qs.add(element);

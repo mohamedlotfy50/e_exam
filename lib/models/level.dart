@@ -1,6 +1,6 @@
 class Level {
   final List<String> levels;
-  final String selectedLevel;
+  final String? selectedLevel;
   bool isValid() {
     if (levels != null) {
       if (selectedLevel != null && levels.contains(selectedLevel)) {

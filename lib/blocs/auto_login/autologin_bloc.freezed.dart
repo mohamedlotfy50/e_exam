@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'autologin_bloc.dart';
 
@@ -9,40 +9,45 @@ part of 'autologin_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$AutologinEventTearOff {
   const _$AutologinEventTearOff();
 
-// ignore: unused_element
   _CheckToken checkToken() {
     return const _CheckToken();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AutologinEvent = _$AutologinEventTearOff();
 
 /// @nodoc
 mixin _$AutologinEvent {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult checkToken(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() checkToken,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult checkToken(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? checkToken,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult checkToken(_CheckToken value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CheckToken value) checkToken,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult checkToken(_CheckToken value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CheckToken value)? checkToken,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -81,6 +86,7 @@ class __$CheckTokenCopyWithImpl<$Res> extends _$AutologinEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_CheckToken implements _CheckToken {
   const _$_CheckToken();
 
@@ -99,20 +105,18 @@ class _$_CheckToken implements _CheckToken {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult checkToken(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() checkToken,
   }) {
-    assert(checkToken != null);
     return checkToken();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult checkToken(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? checkToken,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (checkToken != null) {
       return checkToken();
     }
@@ -121,20 +125,18 @@ class _$_CheckToken implements _CheckToken {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult checkToken(_CheckToken value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CheckToken value) checkToken,
   }) {
-    assert(checkToken != null);
     return checkToken(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult checkToken(_CheckToken value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CheckToken value)? checkToken,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (checkToken != null) {
       return checkToken(this);
     }
@@ -150,56 +152,56 @@ abstract class _CheckToken implements AutologinEvent {
 class _$AutologinStateTearOff {
   const _$AutologinStateTearOff();
 
-// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
-// ignore: unused_element
   _SignedIn signedIn(User user) {
     return _SignedIn(
       user,
     );
   }
 
-// ignore: unused_element
   _NotSignedIn notsignedIn() {
     return const _NotSignedIn();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AutologinState = _$AutologinStateTearOff();
 
 /// @nodoc
 mixin _$AutologinState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult signedIn(User user),
-    @required TResult notsignedIn(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) signedIn,
+    required TResult Function() notsignedIn,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult signedIn(User user),
-    TResult notsignedIn(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? signedIn,
+    TResult Function()? notsignedIn,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult signedIn(_SignedIn value),
-    @required TResult notsignedIn(_NotSignedIn value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_SignedIn value) signedIn,
+    required TResult Function(_NotSignedIn value) notsignedIn,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult signedIn(_SignedIn value),
-    TResult notsignedIn(_NotSignedIn value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_SignedIn value)? signedIn,
+    TResult Function(_NotSignedIn value)? notsignedIn,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -236,6 +238,7 @@ class __$InitialCopyWithImpl<$Res> extends _$AutologinStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -254,26 +257,22 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult signedIn(User user),
-    @required TResult notsignedIn(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) signedIn,
+    required TResult Function() notsignedIn,
   }) {
-    assert(initial != null);
-    assert(signedIn != null);
-    assert(notsignedIn != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult signedIn(User user),
-    TResult notsignedIn(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? signedIn,
+    TResult Function()? notsignedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -282,26 +281,22 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult signedIn(_SignedIn value),
-    @required TResult notsignedIn(_NotSignedIn value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_SignedIn value) signedIn,
+    required TResult Function(_NotSignedIn value) notsignedIn,
   }) {
-    assert(initial != null);
-    assert(signedIn != null);
-    assert(notsignedIn != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult signedIn(_SignedIn value),
-    TResult notsignedIn(_NotSignedIn value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_SignedIn value)? signedIn,
+    TResult Function(_NotSignedIn value)? notsignedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -331,17 +326,21 @@ class __$SignedInCopyWithImpl<$Res> extends _$AutologinStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
+    Object? user = freezed,
   }) {
     return _then(_SignedIn(
-      user == freezed ? _value.user : user as User,
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_SignedIn implements _SignedIn {
-  const _$_SignedIn(this.user) : assert(user != null);
+  const _$_SignedIn(this.user);
 
   @override
   final User user;
@@ -370,26 +369,22 @@ class _$_SignedIn implements _SignedIn {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult signedIn(User user),
-    @required TResult notsignedIn(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) signedIn,
+    required TResult Function() notsignedIn,
   }) {
-    assert(initial != null);
-    assert(signedIn != null);
-    assert(notsignedIn != null);
     return signedIn(user);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult signedIn(User user),
-    TResult notsignedIn(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? signedIn,
+    TResult Function()? notsignedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signedIn != null) {
       return signedIn(user);
     }
@@ -398,26 +393,22 @@ class _$_SignedIn implements _SignedIn {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult signedIn(_SignedIn value),
-    @required TResult notsignedIn(_NotSignedIn value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_SignedIn value) signedIn,
+    required TResult Function(_NotSignedIn value) notsignedIn,
   }) {
-    assert(initial != null);
-    assert(signedIn != null);
-    assert(notsignedIn != null);
     return signedIn(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult signedIn(_SignedIn value),
-    TResult notsignedIn(_NotSignedIn value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_SignedIn value)? signedIn,
+    TResult Function(_NotSignedIn value)? notsignedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signedIn != null) {
       return signedIn(this);
     }
@@ -428,9 +419,10 @@ class _$_SignedIn implements _SignedIn {
 abstract class _SignedIn implements AutologinState {
   const factory _SignedIn(User user) = _$_SignedIn;
 
-  User get user;
+  User get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$SignedInCopyWith<_SignedIn> get copyWith;
+  _$SignedInCopyWith<_SignedIn> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -453,6 +445,7 @@ class __$NotSignedInCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_NotSignedIn implements _NotSignedIn {
   const _$_NotSignedIn();
 
@@ -471,26 +464,22 @@ class _$_NotSignedIn implements _NotSignedIn {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult signedIn(User user),
-    @required TResult notsignedIn(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) signedIn,
+    required TResult Function() notsignedIn,
   }) {
-    assert(initial != null);
-    assert(signedIn != null);
-    assert(notsignedIn != null);
     return notsignedIn();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult signedIn(User user),
-    TResult notsignedIn(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? signedIn,
+    TResult Function()? notsignedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notsignedIn != null) {
       return notsignedIn();
     }
@@ -499,26 +488,22 @@ class _$_NotSignedIn implements _NotSignedIn {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult signedIn(_SignedIn value),
-    @required TResult notsignedIn(_NotSignedIn value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_SignedIn value) signedIn,
+    required TResult Function(_NotSignedIn value) notsignedIn,
   }) {
-    assert(initial != null);
-    assert(signedIn != null);
-    assert(notsignedIn != null);
     return notsignedIn(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult signedIn(_SignedIn value),
-    TResult notsignedIn(_NotSignedIn value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_SignedIn value)? signedIn,
+    TResult Function(_NotSignedIn value)? notsignedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notsignedIn != null) {
       return notsignedIn(this);
     }

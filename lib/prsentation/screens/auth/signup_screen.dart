@@ -62,7 +62,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 DropdownButton<String>(
                   onChanged: (role) {
-                    context.read<AuthBloc>().add(UserRoleChanged(role));
+                    context.read<AuthBloc>().add(UserRoleChanged(role!));
                   },
                   items: state.userRole.roles
                       .map((e) => DropdownMenuItem<String>(
@@ -75,7 +75,7 @@ class SignUpScreen extends StatelessWidget {
                 if (state.userRole.isStudent())
                   DropdownButton<String>(
                     onChanged: (level) {
-                      context.read<AuthBloc>().add(LevelChanged(level));
+                      context.read<AuthBloc>().add(LevelChanged(level!));
                     },
                     items: context
                         .read<AuthBloc>()
@@ -94,7 +94,7 @@ class SignUpScreen extends StatelessWidget {
                     onChanged: (department) {
                       context
                           .read<AuthBloc>()
-                          .add(DepartmentChanged(department));
+                          .add(DepartmentChanged(department!));
                     },
                     items: state.department.departments
                         .map(

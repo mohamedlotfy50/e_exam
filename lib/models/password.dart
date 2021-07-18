@@ -5,15 +5,15 @@ import 'failure_message.dart';
 class Password {
   final Either<FailureMessage, String> _value;
 
-  String getValueOrNull() => _value.fold((l) => null, id);
-  String getTheErrorMessage() => _value.fold((l) => l.body, (r) => null);
+  String? getValueOrNull() => _value.fold((l) => null, id);
+  String? getTheErrorMessage() => _value.fold((l) => l.body, (r) => null);
   bool isValid() => _value.isRight();
   Password._(this._value);
   factory Password(String password) {
     return Password._(_passwordValidator(password));
   }
 
-  String isEqualErrorMessage(Password obj) {
+  String? isEqualErrorMessage(Password obj) {
     if (_value != obj._value && obj.isValid()) {
       return 'password does not match';
     }

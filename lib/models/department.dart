@@ -1,6 +1,6 @@
 class Department {
   final List<String> departments;
-  final String selectedDepartment;
+  final String? selectedDepartment;
   bool isValid() {
     if (departments != null) {
       if (selectedDepartment != null &&

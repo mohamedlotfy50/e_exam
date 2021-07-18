@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   final User user;
 
-  const HomePage({Key key, @required this.user}) : super(key: key);
+  const HomePage({Key? key, required this.user}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => AddingExam(
-                        department: user.department.selectedDepartment,
+                        department: user.department!.selectedDepartment,
                       ),
                     ));
                   }),
@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => SetExam(
-                        department: user.department.selectedDepartment,
+                        department: user.department!.selectedDepartment,
                       ),
                     ));
                   }),
@@ -65,8 +65,8 @@ class HomePage extends StatelessWidget {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => MyExams(
                         id: user.uid,
-                        level: user.level.selectedLevel,
-                        department: user.department.selectedDepartment,
+                        level: user.level!.selectedLevel,
+                        department: user.department!.selectedDepartment,
                       ),
                     ));
                   }),
@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
         title: Text('Examinator'),
       ),
       body: Center(
-        child: Text(user.email.getValueOrNull()),
+        child: Text(user.email.getValueOrNull()!),
       ),
     );
   }

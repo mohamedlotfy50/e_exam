@@ -1,17 +1,17 @@
 import 'package:flutter/foundation.dart';
 
 class Question {
-  final String rank;
+  final String? rank;
 
-  final String question;
-  final Map<String, dynamic> answers;
+  final String? question;
+  final Map<String, dynamic>? answers;
 
   Question(
-      {@required this.question, @required this.answers, @required this.rank});
+      {required this.question, required this.answers, required this.rank});
 
   factory Question.fromJson(Map<String, dynamic> json) {
     return Question(
-        question: json['question'] as String,
+        question: json['question'] as String?,
         answers: json['answers'],
         rank: json['rank']);
   }

@@ -9,22 +9,22 @@ import 'password.dart';
 import 'roles.dart';
 
 class User {
-  final String uid;
+  final String? uid;
   final Name name;
   final Email email;
   final UserRole role;
   final CollegeID collegeID;
 
-  final Level level;
-  final Department department;
-  final Password password;
+  final Level? level;
+  final Department? department;
+  final Password? password;
 
   User({
-    @required this.uid,
-    @required this.name,
-    @required this.email,
-    @required this.role,
-    @required this.collegeID,
+    required this.uid,
+    required this.name,
+    required this.email,
+    required this.role,
+    required this.collegeID,
     this.level,
     this.department,
     this.password,
@@ -33,13 +33,13 @@ class User {
     bool _defaults = name.isValid() &&
         email.isValid() &&
         collegeID.isValid() &&
-        password.isValid();
+        password!.isValid();
     if (role.isAdmin()) {
       return _defaults;
     } else if (role.isDoctor()) {
-      return _defaults && department.isValid();
+      return _defaults && department!.isValid();
     } else {
-      return _defaults && department.isValid() && level.isValid();
+      return _defaults && department!.isValid() && level!.isValid();
     }
   }
 
@@ -49,9 +49,9 @@ class User {
         'email': email.getValueOrNull(),
         'user role': role.role,
         'college id': collegeID.getValueOrNull(),
-        'level': level.selectedLevel ?? '',
-        'department': department.selectedDepartment ?? '',
-        'password': password.getValueOrNull() ?? '',
+        'level': level!.selectedLevel ?? '',
+        'department': department!.selectedDepartment ?? '',
+        'password': password!.getValueOrNull() ?? '',
       };
 
   factory User.fromJson(Map<String, dynamic> json) => User(

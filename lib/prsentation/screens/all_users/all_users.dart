@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class AllUsers extends StatelessWidget {
   final bool isAdmin;
-  final String uid;
-  final String department;
-  const AllUsers({Key key, this.isAdmin = false, this.uid, this.department})
+  final String? uid;
+  final String? department;
+  const AllUsers({Key? key, this.isAdmin = false, this.uid, this.department})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -39,11 +39,11 @@ class AllUsers extends StatelessWidget {
             );
           }
           return ListView.builder(
-            itemCount: snapshot.data.docs.length,
+            itemCount: snapshot.data!.docs.length,
             itemBuilder: (context, index) {
               return ListTile(
-                title: Text(snapshot.data.docs[index]['name']),
-                subtitle: Text(snapshot.data.docs[index]['email']),
+                title: Text(snapshot.data!.docs[index]['name']),
+                subtitle: Text(snapshot.data!.docs[index]['email']),
               );
             },
           );

@@ -9,7 +9,7 @@ class Authentication {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   Future<UserCredential> signIn(
-      {@required String email, @required String password}) async {
+      {required String email, required String password}) async {
     return await _firebaseAuth.signInWithEmailAndPassword(
         email: email, password: password);
   }
@@ -24,12 +24,12 @@ class Authentication {
         .collection('levels&departments')
         .doc('dRMg7c6WTiyPv8Cyhu9j')
         .get();
-    _map = cast(_snapShot.data()['levels&departments']);
+    _map = cast(_snapShot.data()!['levels&departments']);
 
     return _map;
   }
 
-  Future<void> requestSignUp(Map<String, dynamic> data, String id) async {
+  Future<void> requestSignUp(Map<String, dynamic> data, String? id) async {
     final doc = await _firestore.collection('request').doc(id).get();
     if (doc.exists) {
       throw FirebaseException(
@@ -41,8 +41,8 @@ class Authentication {
     }
   }
 
-  Future<my.User> getSignedInUser() async {
-    final User _userState = _firebaseAuth.currentUser;
+  Future<my.User?> getSignedInUser() async {
+    final User? _userState = _firebaseAuth.currentUser;
     if (_userState != null) {
       final my.User _user = await getUser(_userState.uid);
       return _user;
@@ -51,9 +51,9 @@ class Authentication {
     }
   }
 
-  Future<my.User> getUser(String uuid) async {
+  Future<my.User> getUser(String? uuid) async {
     final DocumentSnapshot _userDoc =
         await _firestore.collection('users').doc(uuid).get();
-    return my.User.fromJson(_userDoc.data());
+    return my.User.fromJson(_userDoc.data() as Map<String, dynamic>);
   }
 }

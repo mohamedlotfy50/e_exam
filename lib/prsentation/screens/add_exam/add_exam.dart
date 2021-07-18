@@ -4,9 +4,9 @@ import 'question.dart';
 import 'package:flutter/material.dart';
 
 class AddingExam extends StatefulWidget {
-  final String department;
+  final String? department;
 
-  const AddingExam({Key key, @required this.department}) : super(key: key);
+  const AddingExam({Key? key, required this.department}) : super(key: key);
   @override
   _AddingExamState createState() => _AddingExamState();
 }
@@ -16,7 +16,7 @@ class _AddingExamState extends State<AddingExam> {
   TextEditingController _examNumber = TextEditingController();
 
   List<QuestionCard> questions = [];
-  String currentLevel = '';
+  String? currentLevel = '';
   List<String> levels = [];
 
   createFileds(int n) {
@@ -66,7 +66,7 @@ class _AddingExamState extends State<AddingExam> {
                                 .get();
                             if (levels.isEmpty) {
                               x
-                                  .data()['levels&departments']
+                                  .data()!['levels&departments']
                                   .forEach((key, value) {
                                 levels.add(key);
                               });

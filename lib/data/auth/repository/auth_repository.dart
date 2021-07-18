@@ -13,7 +13,7 @@ import '../provider/firebase_auth.dart';
 //TODO 2: handling all errors that could happned
 class AuthRepository {
   final Authentication _authentication = Authentication();
-  Map<String, dynamic> _cache;
+  Map<String, dynamic>? _cache;
   List<String> _levels = [];
   List<String> _departments = [];
   Map<String, Department> _studentDepartments = {};
@@ -22,7 +22,7 @@ class AuthRepository {
       Email email, Password password) async {
     try {
       final UserCredential _credential = await _authentication.signIn(
-          email: email.getValueOrNull(), password: password.getValueOrNull());
+          email: email.getValueOrNull()!, password: password.getValueOrNull()!);
       final my.User _user =
           await _authentication.getUser(_credential?.user?.uid);
       return right(_user);
@@ -34,8 +34,8 @@ class AuthRepository {
 
   Department getDeprtments() =>
       Department(_departments.first, departments: _departments);
-  Department getCorrospondingDeprtments(String level) =>
-      _studentDepartments[level];
+  Department? getCorrospondingDeprtments(String? level) =>
+      _studentDepartments[level!];
   Level getLevels() => Level(_levels.first, levels: _levels);
 
   Future<void> loadLevelsAndDepartment() async {
@@ -72,7 +72,7 @@ class AuthRepository {
   }
 
   Future<Option<my.User>> getSignedInUser() async {
-    final my.User _user = await _authentication.getSignedInUser();
+    final my.User? _user = await _authentication.getSignedInUser();
     if (_user != null) {
       return some(_user);
     }

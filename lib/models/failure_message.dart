@@ -1,6 +1,6 @@
 class FailureMessage {
   final String title;
-  final String body;
+  final String? body;
 
   FailureMessage({
     this.title = 'Error',

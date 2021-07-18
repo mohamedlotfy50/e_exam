@@ -57,7 +57,7 @@ class QuestionCard extends StatelessWidget {
 class Answersfiled extends StatelessWidget {
   final TextEditingController answer, score;
 
-  const Answersfiled({Key key, @required this.answer, @required this.score})
+  const Answersfiled({Key? key, required this.answer, required this.score})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

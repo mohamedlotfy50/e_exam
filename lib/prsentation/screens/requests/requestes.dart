@@ -26,11 +26,11 @@ class Requestes extends StatelessWidget {
             );
           }
           return ListView.builder(
-            itemCount: snapshot.data.docs.length,
+            itemCount: snapshot.data!.docs.length,
             itemBuilder: (context, index) {
               return ListTile(
-                title: Text(snapshot.data.docs[index]['name']),
-                subtitle: Text(snapshot.data.docs[index]['email']),
+                title: Text(snapshot.data!.docs[index]['name']),
+                subtitle: Text(snapshot.data!.docs[index]['email']),
                 trailing: Container(
                   width: 200,
                   child: Row(
@@ -43,7 +43,7 @@ class Requestes extends StatelessWidget {
                           onPressed: () {
                             FirebaseFirestore.instance
                                 .collection('request')
-                                .doc(snapshot.data.docs[index]['uid'])
+                                .doc(snapshot.data!.docs[index]['uid'])
                                 .delete();
                           }),
                       IconButton(
@@ -52,36 +52,36 @@ class Requestes extends StatelessWidget {
                             color: Colors.green,
                           ),
                           onPressed: () async {
-                            await FirebaseAuth.instance
-                                .createUserWithEmailAndPassword(
-                                    email: snapshot.data.docs[index]['email'],
-                                    password: snapshot.data.docs[index]
-                                        ['password'])
-                                .then((value) async {
-                              await FirebaseFirestore.instance
-                                  .collection('users')
-                                  .doc(value.user.uid)
-                                  .set(User(
-                                          uid: value.user.uid,
-                                          name: Name(snapshot.data.docs[index]
-                                              ['name']),
-                                          email: Email(snapshot.data.docs[index]
-                                              ['email']),
-                                          role: UserRole(snapshot
-                                              .data.docs[index]['user role']),
-                                          collegeID: CollegeID(snapshot
-                                              .data.docs[index]['college id']),
-                                          department: Department(snapshot
-                                              .data.docs[index]['department']),
-                                          level: Level(snapshot.data.docs[index]['level']),
-                                          password: Password(''))
-                                      .toJson());
-                            }).then((value) async {
-                              await FirebaseFirestore.instance
-                                  .collection('request')
-                                  .doc(snapshot.data.docs[index]['uid'])
-                                  .delete();
-                            });
+                            // await FirebaseAuth.instance
+                            //     .createUserWithEmailAndPassword(
+                            //         email: snapshot.data!.docs[index]['email'],
+                            //         password: snapshot.data!.docs[index]
+                            //             ['password'])
+                            //     .then((value) async {
+                            //   await FirebaseFirestore.instance
+                            //       .collection('users')
+                            //       .doc(value.user!.uid)
+                            //       .set(User(
+                            //               uid: value.user!.uid,
+                            //               name: Name(snapshot.data!.docs[index]
+                            //                   ['name']),
+                            //               email: Email(snapshot.data!.docs[index]
+                            //                   ['email']),
+                            //               role: UserRole(snapshot
+                            //                   .data!.docs[index]['user role']),
+                            //               collegeID: CollegeID(snapshot
+                            //                   .data!.docs[index]['college id']),
+                            //               department: Department(snapshot
+                            //                   .data!.docs[index]['department']),
+                            //               level: Level(snapshot.data!.docs[index]['level']),
+                            //               password: Password(''))
+                            //           .toJson());
+                            // }).then((value) async {
+                            //   await FirebaseFirestore.instance
+                            //       .collection('request')
+                            //       .doc(snapshot.data!.docs[index]['uid'])
+                            //       .delete();
+                            // } as FutureOr<_> Function(Null));
                           }),
                     ],
                   ),

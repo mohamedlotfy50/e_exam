@@ -13,16 +13,16 @@ class AuthWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<AutologinBloc, AutologinState>(
       listener: (context, state) {
-        state.map(initial: (_) {
-          print('init');
-        }, signedIn: (user) {
-          Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (context) => HomePage(user: user.user)));
-        }, notsignedIn: (_) {
-          Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (context) =>
-                  BlocProvider.value(value: AuthBloc(), child: WebScreen())));
-        });
+        // state.map(initial: (_) {
+        //   print('init');
+        // }, signedIn: (user) {
+        //   Navigator.of(context).pushReplacement(MaterialPageRoute(
+        //       builder: (context) => HomePage(user: user.user)));
+        // }, notsignedIn: (_) {
+        //   Navigator.of(context).pushReplacement(MaterialPageRoute(
+        //       builder: (context) =>
+        //           BlocProvider.value(value: AuthBloc(), child: WebScreen())));
+        // });
       },
       child: Scaffold(
         body: Center(

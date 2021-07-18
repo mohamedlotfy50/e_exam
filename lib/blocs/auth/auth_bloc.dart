@@ -36,11 +36,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           await _authRepository.loadLevelsAndDepartment();
 
           if (state.userRole.isStudent()) {
-            yield state.copyWith(
-                department: _authRepository.getCorrospondingDeprtments(
-                    _authRepository.getLevels().selectedLevel),
-                level: _authRepository.getLevels(),
-                showLoading: false);
+            // yield state.copyWith(
+            //     department: _authRepository.getCorrospondingDeprtments(
+            //         _authRepository.getLevels().selectedLevel),
+            //     level: _authRepository.getLevels(),
+            //     showLoading: false);
           } else {
             yield state.copyWith(
                 department: _authRepository.getDeprtments(),
@@ -73,9 +73,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
                 departments: state.department.departments));
       },
       levelChanged: (e) async* {
-        yield state.copyWith(
-            level: Level(e.level, levels: state.level.levels),
-            department: _authRepository.getCorrospondingDeprtments(e.level));
+        // yield state.copyWith(
+        //     level: Level(e.level, levels: state.level.levels),
+        //     department: _authRepository.getCorrospondingDeprtments(e.level));
       },
       passwordChanged: (e) async* {
         yield state.copyWith(password: Password(e.password));

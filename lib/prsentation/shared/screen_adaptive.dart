@@ -4,14 +4,14 @@ class ScreenAdaptive extends StatelessWidget {
   final int _maxMobile = 480;
   final int _maxTablet = 768;
   final Widget moblie;
-  final Widget tablet;
+  final Widget? tablet;
   final Widget web;
 
   const ScreenAdaptive({
-    Key key,
-    @required this.moblie,
+    Key? key,
+    required this.moblie,
     this.tablet,
-    @required this.web,
+    required this.web,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'auth_bloc.dart';
 
@@ -9,155 +9,151 @@ part of 'auth_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$AuthEventTearOff {
   const _$AuthEventTearOff();
 
-// ignore: unused_element
   NameChanged nameChanged(String name) {
     return NameChanged(
       name,
     );
   }
 
-// ignore: unused_element
   EmailChanged emailChanged(String email) {
     return EmailChanged(
       email,
     );
   }
 
-// ignore: unused_element
   CollegeIDChanged collegeIDChanged(String id) {
     return CollegeIDChanged(
       id,
     );
   }
 
-// ignore: unused_element
   UserRoleChanged userRoleChanged(String role) {
     return UserRoleChanged(
       role,
     );
   }
 
-// ignore: unused_element
   DepartmentChanged departmentChanged(String department) {
     return DepartmentChanged(
       department,
     );
   }
 
-// ignore: unused_element
   LevelChanged levelChanged(String level) {
     return LevelChanged(
       level,
     );
   }
 
-// ignore: unused_element
   PasswordChanged passwordChanged(String password) {
     return PasswordChanged(
       password,
     );
   }
 
-// ignore: unused_element
   PasswordConfigChanged passwordConfigChanged(String passwordConfig) {
     return PasswordConfigChanged(
       passwordConfig,
     );
   }
 
-// ignore: unused_element
   GetLevelAndDepartment getLevelAndDepartment() {
     return const GetLevelAndDepartment();
   }
 
-// ignore: unused_element
   SignIn signIn() {
     return const SignIn();
   }
 
-// ignore: unused_element
   SignUp signUp() {
     return const SignUp();
   }
 
-// ignore: unused_element
   ToDefault toDefault() {
     return const ToDefault();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AuthEvent = _$AuthEventTearOff();
 
 /// @nodoc
 mixin _$AuthEvent {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -195,17 +191,21 @@ class _$NameChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
+    Object? name = freezed,
   }) {
     return _then(NameChanged(
-      name == freezed ? _value.name : name as String,
+      name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
-  const _$NameChanged(this.name) : assert(name != null);
+  const _$NameChanged(this.name);
 
   @override
   final String name;
@@ -242,53 +242,40 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return nameChanged(name);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (nameChanged != null) {
       return nameChanged(name);
     }
@@ -297,53 +284,42 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return nameChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (nameChanged != null) {
       return nameChanged(this);
     }
@@ -354,9 +330,10 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
 abstract class NameChanged implements AuthEvent {
   const factory NameChanged(String name) = _$NameChanged;
 
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $NameChangedCopyWith<NameChanged> get copyWith;
+  $NameChangedCopyWith<NameChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -379,17 +356,21 @@ class _$EmailChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object email = freezed,
+    Object? email = freezed,
   }) {
     return _then(EmailChanged(
-      email == freezed ? _value.email : email as String,
+      email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
-  const _$EmailChanged(this.email) : assert(email != null);
+  const _$EmailChanged(this.email);
 
   @override
   final String email;
@@ -426,53 +407,40 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return emailChanged(email);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (emailChanged != null) {
       return emailChanged(email);
     }
@@ -481,53 +449,42 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return emailChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (emailChanged != null) {
       return emailChanged(this);
     }
@@ -538,9 +495,10 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
 abstract class EmailChanged implements AuthEvent {
   const factory EmailChanged(String email) = _$EmailChanged;
 
-  String get email;
+  String get email => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EmailChangedCopyWith<EmailChanged> get copyWith;
+  $EmailChangedCopyWith<EmailChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -563,19 +521,23 @@ class _$CollegeIDChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
+    Object? id = freezed,
   }) {
     return _then(CollegeIDChanged(
-      id == freezed ? _value.id : id as String,
+      id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$CollegeIDChanged
     with DiagnosticableTreeMixin
     implements CollegeIDChanged {
-  const _$CollegeIDChanged(this.id) : assert(id != null);
+  const _$CollegeIDChanged(this.id);
 
   @override
   final String id;
@@ -612,53 +574,40 @@ class _$CollegeIDChanged
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return collegeIDChanged(id);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (collegeIDChanged != null) {
       return collegeIDChanged(id);
     }
@@ -667,53 +616,42 @@ class _$CollegeIDChanged
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return collegeIDChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (collegeIDChanged != null) {
       return collegeIDChanged(this);
     }
@@ -724,9 +662,10 @@ class _$CollegeIDChanged
 abstract class CollegeIDChanged implements AuthEvent {
   const factory CollegeIDChanged(String id) = _$CollegeIDChanged;
 
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CollegeIDChangedCopyWith<CollegeIDChanged> get copyWith;
+  $CollegeIDChangedCopyWith<CollegeIDChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -749,19 +688,23 @@ class _$UserRoleChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object role = freezed,
+    Object? role = freezed,
   }) {
     return _then(UserRoleChanged(
-      role == freezed ? _value.role : role as String,
+      role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$UserRoleChanged
     with DiagnosticableTreeMixin
     implements UserRoleChanged {
-  const _$UserRoleChanged(this.role) : assert(role != null);
+  const _$UserRoleChanged(this.role);
 
   @override
   final String role;
@@ -798,53 +741,40 @@ class _$UserRoleChanged
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return userRoleChanged(role);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userRoleChanged != null) {
       return userRoleChanged(role);
     }
@@ -853,53 +783,42 @@ class _$UserRoleChanged
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return userRoleChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userRoleChanged != null) {
       return userRoleChanged(this);
     }
@@ -910,9 +829,10 @@ class _$UserRoleChanged
 abstract class UserRoleChanged implements AuthEvent {
   const factory UserRoleChanged(String role) = _$UserRoleChanged;
 
-  String get role;
+  String get role => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserRoleChangedCopyWith<UserRoleChanged> get copyWith;
+  $UserRoleChangedCopyWith<UserRoleChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -936,19 +856,23 @@ class _$DepartmentChangedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object department = freezed,
+    Object? department = freezed,
   }) {
     return _then(DepartmentChanged(
-      department == freezed ? _value.department : department as String,
+      department == freezed
+          ? _value.department
+          : department // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$DepartmentChanged
     with DiagnosticableTreeMixin
     implements DepartmentChanged {
-  const _$DepartmentChanged(this.department) : assert(department != null);
+  const _$DepartmentChanged(this.department);
 
   @override
   final String department;
@@ -986,53 +910,40 @@ class _$DepartmentChanged
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return departmentChanged(department);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (departmentChanged != null) {
       return departmentChanged(department);
     }
@@ -1041,53 +952,42 @@ class _$DepartmentChanged
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return departmentChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (departmentChanged != null) {
       return departmentChanged(this);
     }
@@ -1098,9 +998,10 @@ class _$DepartmentChanged
 abstract class DepartmentChanged implements AuthEvent {
   const factory DepartmentChanged(String department) = _$DepartmentChanged;
 
-  String get department;
+  String get department => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DepartmentChangedCopyWith<DepartmentChanged> get copyWith;
+  $DepartmentChangedCopyWith<DepartmentChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1123,17 +1024,21 @@ class _$LevelChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object level = freezed,
+    Object? level = freezed,
   }) {
     return _then(LevelChanged(
-      level == freezed ? _value.level : level as String,
+      level == freezed
+          ? _value.level
+          : level // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
-  const _$LevelChanged(this.level) : assert(level != null);
+  const _$LevelChanged(this.level);
 
   @override
   final String level;
@@ -1170,53 +1075,40 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return levelChanged(level);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (levelChanged != null) {
       return levelChanged(level);
     }
@@ -1225,53 +1117,42 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return levelChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (levelChanged != null) {
       return levelChanged(this);
     }
@@ -1282,9 +1163,10 @@ class _$LevelChanged with DiagnosticableTreeMixin implements LevelChanged {
 abstract class LevelChanged implements AuthEvent {
   const factory LevelChanged(String level) = _$LevelChanged;
 
-  String get level;
+  String get level => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LevelChangedCopyWith<LevelChanged> get copyWith;
+  $LevelChangedCopyWith<LevelChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1307,19 +1189,23 @@ class _$PasswordChangedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object password = freezed,
+    Object? password = freezed,
   }) {
     return _then(PasswordChanged(
-      password == freezed ? _value.password : password as String,
+      password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$PasswordChanged
     with DiagnosticableTreeMixin
     implements PasswordChanged {
-  const _$PasswordChanged(this.password) : assert(password != null);
+  const _$PasswordChanged(this.password);
 
   @override
   final String password;
@@ -1357,53 +1243,40 @@ class _$PasswordChanged
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return passwordChanged(password);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (passwordChanged != null) {
       return passwordChanged(password);
     }
@@ -1412,53 +1285,42 @@ class _$PasswordChanged
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return passwordChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (passwordChanged != null) {
       return passwordChanged(this);
     }
@@ -1469,9 +1331,10 @@ class _$PasswordChanged
 abstract class PasswordChanged implements AuthEvent {
   const factory PasswordChanged(String password) = _$PasswordChanged;
 
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PasswordChangedCopyWith<PasswordChanged> get copyWith;
+  $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1495,22 +1358,23 @@ class _$PasswordConfigChangedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object passwordConfig = freezed,
+    Object? passwordConfig = freezed,
   }) {
     return _then(PasswordConfigChanged(
       passwordConfig == freezed
           ? _value.passwordConfig
-          : passwordConfig as String,
+          : passwordConfig // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$PasswordConfigChanged
     with DiagnosticableTreeMixin
     implements PasswordConfigChanged {
-  const _$PasswordConfigChanged(this.passwordConfig)
-      : assert(passwordConfig != null);
+  const _$PasswordConfigChanged(this.passwordConfig);
 
   @override
   final String passwordConfig;
@@ -1550,53 +1414,40 @@ class _$PasswordConfigChanged
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return passwordConfigChanged(passwordConfig);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (passwordConfigChanged != null) {
       return passwordConfigChanged(passwordConfig);
     }
@@ -1605,53 +1456,42 @@ class _$PasswordConfigChanged
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return passwordConfigChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (passwordConfigChanged != null) {
       return passwordConfigChanged(this);
     }
@@ -1663,9 +1503,10 @@ abstract class PasswordConfigChanged implements AuthEvent {
   const factory PasswordConfigChanged(String passwordConfig) =
       _$PasswordConfigChanged;
 
-  String get passwordConfig;
+  String get passwordConfig => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PasswordConfigChangedCopyWith<PasswordConfigChanged> get copyWith;
+  $PasswordConfigChangedCopyWith<PasswordConfigChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1688,6 +1529,7 @@ class _$GetLevelAndDepartmentCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$GetLevelAndDepartment
     with DiagnosticableTreeMixin
     implements GetLevelAndDepartment {
@@ -1715,53 +1557,40 @@ class _$GetLevelAndDepartment
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return getLevelAndDepartment();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (getLevelAndDepartment != null) {
       return getLevelAndDepartment();
     }
@@ -1770,53 +1599,42 @@ class _$GetLevelAndDepartment
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return getLevelAndDepartment(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (getLevelAndDepartment != null) {
       return getLevelAndDepartment(this);
     }
@@ -1845,6 +1663,7 @@ class _$SignInCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$SignIn with DiagnosticableTreeMixin implements SignIn {
   const _$SignIn();
 
@@ -1869,53 +1688,40 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return signIn();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signIn != null) {
       return signIn();
     }
@@ -1924,53 +1730,42 @@ class _$SignIn with DiagnosticableTreeMixin implements SignIn {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return signIn(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signIn != null) {
       return signIn(this);
     }
@@ -1999,6 +1794,7 @@ class _$SignUpCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$SignUp with DiagnosticableTreeMixin implements SignUp {
   const _$SignUp();
 
@@ -2023,53 +1819,40 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return signUp();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signUp != null) {
       return signUp();
     }
@@ -2078,53 +1861,42 @@ class _$SignUp with DiagnosticableTreeMixin implements SignUp {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return signUp(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signUp != null) {
       return signUp(this);
     }
@@ -2153,6 +1925,7 @@ class _$ToDefaultCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
   const _$ToDefault();
 
@@ -2177,53 +1950,40 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult nameChanged(String name),
-    @required TResult emailChanged(String email),
-    @required TResult collegeIDChanged(String id),
-    @required TResult userRoleChanged(String role),
-    @required TResult departmentChanged(String department),
-    @required TResult levelChanged(String level),
-    @required TResult passwordChanged(String password),
-    @required TResult passwordConfigChanged(String passwordConfig),
-    @required TResult getLevelAndDepartment(),
-    @required TResult signIn(),
-    @required TResult signUp(),
-    @required TResult toDefault(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String id) collegeIDChanged,
+    required TResult Function(String role) userRoleChanged,
+    required TResult Function(String department) departmentChanged,
+    required TResult Function(String level) levelChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String passwordConfig) passwordConfigChanged,
+    required TResult Function() getLevelAndDepartment,
+    required TResult Function() signIn,
+    required TResult Function() signUp,
+    required TResult Function() toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return toDefault();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult nameChanged(String name),
-    TResult emailChanged(String email),
-    TResult collegeIDChanged(String id),
-    TResult userRoleChanged(String role),
-    TResult departmentChanged(String department),
-    TResult levelChanged(String level),
-    TResult passwordChanged(String password),
-    TResult passwordConfigChanged(String passwordConfig),
-    TResult getLevelAndDepartment(),
-    TResult signIn(),
-    TResult signUp(),
-    TResult toDefault(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String id)? collegeIDChanged,
+    TResult Function(String role)? userRoleChanged,
+    TResult Function(String department)? departmentChanged,
+    TResult Function(String level)? levelChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String passwordConfig)? passwordConfigChanged,
+    TResult Function()? getLevelAndDepartment,
+    TResult Function()? signIn,
+    TResult Function()? signUp,
+    TResult Function()? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (toDefault != null) {
       return toDefault();
     }
@@ -2232,53 +1992,42 @@ class _$ToDefault with DiagnosticableTreeMixin implements ToDefault {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult nameChanged(NameChanged value),
-    @required TResult emailChanged(EmailChanged value),
-    @required TResult collegeIDChanged(CollegeIDChanged value),
-    @required TResult userRoleChanged(UserRoleChanged value),
-    @required TResult departmentChanged(DepartmentChanged value),
-    @required TResult levelChanged(LevelChanged value),
-    @required TResult passwordChanged(PasswordChanged value),
-    @required TResult passwordConfigChanged(PasswordConfigChanged value),
-    @required TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    @required TResult signIn(SignIn value),
-    @required TResult signUp(SignUp value),
-    @required TResult toDefault(ToDefault value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(CollegeIDChanged value) collegeIDChanged,
+    required TResult Function(UserRoleChanged value) userRoleChanged,
+    required TResult Function(DepartmentChanged value) departmentChanged,
+    required TResult Function(LevelChanged value) levelChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(PasswordConfigChanged value)
+        passwordConfigChanged,
+    required TResult Function(GetLevelAndDepartment value)
+        getLevelAndDepartment,
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignUp value) signUp,
+    required TResult Function(ToDefault value) toDefault,
   }) {
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(collegeIDChanged != null);
-    assert(userRoleChanged != null);
-    assert(departmentChanged != null);
-    assert(levelChanged != null);
-    assert(passwordChanged != null);
-    assert(passwordConfigChanged != null);
-    assert(getLevelAndDepartment != null);
-    assert(signIn != null);
-    assert(signUp != null);
-    assert(toDefault != null);
     return toDefault(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult nameChanged(NameChanged value),
-    TResult emailChanged(EmailChanged value),
-    TResult collegeIDChanged(CollegeIDChanged value),
-    TResult userRoleChanged(UserRoleChanged value),
-    TResult departmentChanged(DepartmentChanged value),
-    TResult levelChanged(LevelChanged value),
-    TResult passwordChanged(PasswordChanged value),
-    TResult passwordConfigChanged(PasswordConfigChanged value),
-    TResult getLevelAndDepartment(GetLevelAndDepartment value),
-    TResult signIn(SignIn value),
-    TResult signUp(SignUp value),
-    TResult toDefault(ToDefault value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(CollegeIDChanged value)? collegeIDChanged,
+    TResult Function(UserRoleChanged value)? userRoleChanged,
+    TResult Function(DepartmentChanged value)? departmentChanged,
+    TResult Function(LevelChanged value)? levelChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(PasswordConfigChanged value)? passwordConfigChanged,
+    TResult Function(GetLevelAndDepartment value)? getLevelAndDepartment,
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignUp value)? signUp,
+    TResult Function(ToDefault value)? toDefault,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (toDefault != null) {
       return toDefault(this);
     }
@@ -2294,20 +2043,19 @@ abstract class ToDefault implements AuthEvent {
 class _$AuthStateTearOff {
   const _$AuthStateTearOff();
 
-// ignore: unused_element
   _AuthState call(
-      {@required Name name,
-      @required Email email,
-      @required CollegeID collegeID,
-      @required UserRole userRole,
-      @required Department department,
-      @required Level level,
-      @required Password password,
-      @required Password confirmPassword,
-      @required bool isSubmiting,
-      @required bool showLoading,
-      @required bool showErrorMessage,
-      @required Option<Either<FailureMessage, User>> authState}) {
+      {required Name name,
+      required Email email,
+      required CollegeID collegeID,
+      required UserRole userRole,
+      required Department department,
+      required Level level,
+      required Password password,
+      required Password confirmPassword,
+      required bool isSubmiting,
+      required bool showLoading,
+      required bool showErrorMessage,
+      required Option<Either<FailureMessage, User>> authState}) {
     return _AuthState(
       name: name,
       email: email,
@@ -2326,26 +2074,27 @@ class _$AuthStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AuthState = _$AuthStateTearOff();
 
 /// @nodoc
 mixin _$AuthState {
-  Name get name;
-  Email get email;
-  CollegeID get collegeID;
-  UserRole get userRole;
-  Department get department;
-  Level get level;
-  Password get password;
-  Password get confirmPassword;
-  bool get isSubmiting;
-  bool get showLoading;
-  bool get showErrorMessage;
-  Option<Either<FailureMessage, User>> get authState;
+  Name get name => throw _privateConstructorUsedError;
+  Email get email => throw _privateConstructorUsedError;
+  CollegeID get collegeID => throw _privateConstructorUsedError;
+  UserRole get userRole => throw _privateConstructorUsedError;
+  Department get department => throw _privateConstructorUsedError;
+  Level get level => throw _privateConstructorUsedError;
+  Password get password => throw _privateConstructorUsedError;
+  Password get confirmPassword => throw _privateConstructorUsedError;
+  bool get isSubmiting => throw _privateConstructorUsedError;
+  bool get showLoading => throw _privateConstructorUsedError;
+  bool get showErrorMessage => throw _privateConstructorUsedError;
+  Option<Either<FailureMessage, User>> get authState =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $AuthStateCopyWith<AuthState> get copyWith;
+  $AuthStateCopyWith<AuthState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2377,42 +2126,68 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
 
   @override
   $Res call({
-    Object name = freezed,
-    Object email = freezed,
-    Object collegeID = freezed,
-    Object userRole = freezed,
-    Object department = freezed,
-    Object level = freezed,
-    Object password = freezed,
-    Object confirmPassword = freezed,
-    Object isSubmiting = freezed,
-    Object showLoading = freezed,
-    Object showErrorMessage = freezed,
-    Object authState = freezed,
+    Object? name = freezed,
+    Object? email = freezed,
+    Object? collegeID = freezed,
+    Object? userRole = freezed,
+    Object? department = freezed,
+    Object? level = freezed,
+    Object? password = freezed,
+    Object? confirmPassword = freezed,
+    Object? isSubmiting = freezed,
+    Object? showLoading = freezed,
+    Object? showErrorMessage = freezed,
+    Object? authState = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as Name,
-      email: email == freezed ? _value.email : email as Email,
-      collegeID:
-          collegeID == freezed ? _value.collegeID : collegeID as CollegeID,
-      userRole: userRole == freezed ? _value.userRole : userRole as UserRole,
-      department:
-          department == freezed ? _value.department : department as Department,
-      level: level == freezed ? _value.level : level as Level,
-      password: password == freezed ? _value.password : password as Password,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Name,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as Email,
+      collegeID: collegeID == freezed
+          ? _value.collegeID
+          : collegeID // ignore: cast_nullable_to_non_nullable
+              as CollegeID,
+      userRole: userRole == freezed
+          ? _value.userRole
+          : userRole // ignore: cast_nullable_to_non_nullable
+              as UserRole,
+      department: department == freezed
+          ? _value.department
+          : department // ignore: cast_nullable_to_non_nullable
+              as Department,
+      level: level == freezed
+          ? _value.level
+          : level // ignore: cast_nullable_to_non_nullable
+              as Level,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as Password,
       confirmPassword: confirmPassword == freezed
           ? _value.confirmPassword
-          : confirmPassword as Password,
-      isSubmiting:
-          isSubmiting == freezed ? _value.isSubmiting : isSubmiting as bool,
-      showLoading:
-          showLoading == freezed ? _value.showLoading : showLoading as bool,
+          : confirmPassword // ignore: cast_nullable_to_non_nullable
+              as Password,
+      isSubmiting: isSubmiting == freezed
+          ? _value.isSubmiting
+          : isSubmiting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showLoading: showLoading == freezed
+          ? _value.showLoading
+          : showLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
       showErrorMessage: showErrorMessage == freezed
           ? _value.showErrorMessage
-          : showErrorMessage as bool,
+          : showErrorMessage // ignore: cast_nullable_to_non_nullable
+              as bool,
       authState: authState == freezed
           ? _value.authState
-          : authState as Option<Either<FailureMessage, User>>,
+          : authState // ignore: cast_nullable_to_non_nullable
+              as Option<Either<FailureMessage, User>>,
     ));
   }
 }
@@ -2449,73 +2224,88 @@ class __$AuthStateCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object email = freezed,
-    Object collegeID = freezed,
-    Object userRole = freezed,
-    Object department = freezed,
-    Object level = freezed,
-    Object password = freezed,
-    Object confirmPassword = freezed,
-    Object isSubmiting = freezed,
-    Object showLoading = freezed,
-    Object showErrorMessage = freezed,
-    Object authState = freezed,
+    Object? name = freezed,
+    Object? email = freezed,
+    Object? collegeID = freezed,
+    Object? userRole = freezed,
+    Object? department = freezed,
+    Object? level = freezed,
+    Object? password = freezed,
+    Object? confirmPassword = freezed,
+    Object? isSubmiting = freezed,
+    Object? showLoading = freezed,
+    Object? showErrorMessage = freezed,
+    Object? authState = freezed,
   }) {
     return _then(_AuthState(
-      name: name == freezed ? _value.name : name as Name,
-      email: email == freezed ? _value.email : email as Email,
-      collegeID:
-          collegeID == freezed ? _value.collegeID : collegeID as CollegeID,
-      userRole: userRole == freezed ? _value.userRole : userRole as UserRole,
-      department:
-          department == freezed ? _value.department : department as Department,
-      level: level == freezed ? _value.level : level as Level,
-      password: password == freezed ? _value.password : password as Password,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Name,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as Email,
+      collegeID: collegeID == freezed
+          ? _value.collegeID
+          : collegeID // ignore: cast_nullable_to_non_nullable
+              as CollegeID,
+      userRole: userRole == freezed
+          ? _value.userRole
+          : userRole // ignore: cast_nullable_to_non_nullable
+              as UserRole,
+      department: department == freezed
+          ? _value.department
+          : department // ignore: cast_nullable_to_non_nullable
+              as Department,
+      level: level == freezed
+          ? _value.level
+          : level // ignore: cast_nullable_to_non_nullable
+              as Level,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as Password,
       confirmPassword: confirmPassword == freezed
           ? _value.confirmPassword
-          : confirmPassword as Password,
-      isSubmiting:
-          isSubmiting == freezed ? _value.isSubmiting : isSubmiting as bool,
-      showLoading:
-          showLoading == freezed ? _value.showLoading : showLoading as bool,
+          : confirmPassword // ignore: cast_nullable_to_non_nullable
+              as Password,
+      isSubmiting: isSubmiting == freezed
+          ? _value.isSubmiting
+          : isSubmiting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showLoading: showLoading == freezed
+          ? _value.showLoading
+          : showLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
       showErrorMessage: showErrorMessage == freezed
           ? _value.showErrorMessage
-          : showErrorMessage as bool,
+          : showErrorMessage // ignore: cast_nullable_to_non_nullable
+              as bool,
       authState: authState == freezed
           ? _value.authState
-          : authState as Option<Either<FailureMessage, User>>,
+          : authState // ignore: cast_nullable_to_non_nullable
+              as Option<Either<FailureMessage, User>>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
   const _$_AuthState(
-      {@required this.name,
-      @required this.email,
-      @required this.collegeID,
-      @required this.userRole,
-      @required this.department,
-      @required this.level,
-      @required this.password,
-      @required this.confirmPassword,
-      @required this.isSubmiting,
-      @required this.showLoading,
-      @required this.showErrorMessage,
-      @required this.authState})
-      : assert(name != null),
-        assert(email != null),
-        assert(collegeID != null),
-        assert(userRole != null),
-        assert(department != null),
-        assert(level != null),
-        assert(password != null),
-        assert(confirmPassword != null),
-        assert(isSubmiting != null),
-        assert(showLoading != null),
-        assert(showErrorMessage != null),
-        assert(authState != null);
+      {required this.name,
+      required this.email,
+      required this.collegeID,
+      required this.userRole,
+      required this.department,
+      required this.level,
+      required this.password,
+      required this.confirmPassword,
+      required this.isSubmiting,
+      required this.showLoading,
+      required this.showErrorMessage,
+      required this.authState});
 
   @override
   final Name name;
@@ -2629,44 +2419,46 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
 
 abstract class _AuthState implements AuthState {
   const factory _AuthState(
-      {@required Name name,
-      @required Email email,
-      @required CollegeID collegeID,
-      @required UserRole userRole,
-      @required Department department,
-      @required Level level,
-      @required Password password,
-      @required Password confirmPassword,
-      @required bool isSubmiting,
-      @required bool showLoading,
-      @required bool showErrorMessage,
-      @required Option<Either<FailureMessage, User>> authState}) = _$_AuthState;
+      {required Name name,
+      required Email email,
+      required CollegeID collegeID,
+      required UserRole userRole,
+      required Department department,
+      required Level level,
+      required Password password,
+      required Password confirmPassword,
+      required bool isSubmiting,
+      required bool showLoading,
+      required bool showErrorMessage,
+      required Option<Either<FailureMessage, User>> authState}) = _$_AuthState;
 
   @override
-  Name get name;
+  Name get name => throw _privateConstructorUsedError;
   @override
-  Email get email;
+  Email get email => throw _privateConstructorUsedError;
   @override
-  CollegeID get collegeID;
+  CollegeID get collegeID => throw _privateConstructorUsedError;
   @override
-  UserRole get userRole;
+  UserRole get userRole => throw _privateConstructorUsedError;
   @override
-  Department get department;
+  Department get department => throw _privateConstructorUsedError;
   @override
-  Level get level;
+  Level get level => throw _privateConstructorUsedError;
   @override
-  Password get password;
+  Password get password => throw _privateConstructorUsedError;
   @override
-  Password get confirmPassword;
+  Password get confirmPassword => throw _privateConstructorUsedError;
   @override
-  bool get isSubmiting;
+  bool get isSubmiting => throw _privateConstructorUsedError;
   @override
-  bool get showLoading;
+  bool get showLoading => throw _privateConstructorUsedError;
   @override
-  bool get showErrorMessage;
+  bool get showErrorMessage => throw _privateConstructorUsedError;
   @override
-  Option<Either<FailureMessage, User>> get authState;
+  Option<Either<FailureMessage, User>> get authState =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AuthStateCopyWith<_AuthState> get copyWith;
+  _$AuthStateCopyWith<_AuthState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

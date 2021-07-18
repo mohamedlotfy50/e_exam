@@ -8,8 +8,8 @@ class FirebaseWrapper extends StatelessWidget {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
 
   FirebaseWrapper({
-    Key key,
-    @required this.widget,
+    Key? key,
+    required this.widget,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
