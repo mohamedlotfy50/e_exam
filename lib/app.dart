@@ -22,7 +22,36 @@ class MyApp extends StatelessWidget {
       // localizationsDelegates: AppLocalizations.localizationsDelegates,
       // supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Color(0xFF2F81E5),
+        accentColor: Color(0xFF60A2F0),
+        inputDecorationTheme: InputDecorationTheme(
+          hintStyle: TextStyle(color: Colors.white60),
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(5),
+              borderSide: BorderSide(color: Colors.transparent)),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+            borderSide: BorderSide(color: Colors.transparent),
+          ),
+          errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(5),
+              borderSide: BorderSide(color: Colors.red)),
+          focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(5),
+              borderSide: BorderSide(color: Colors.white)),
+          disabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
+        textTheme: TextTheme(
+          bodyText1: TextStyle(color: Colors.white, fontSize: 20),
+          bodyText2: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
       home: FirebaseWrapper(
         widget: MultiBlocProvider(
@@ -31,8 +60,7 @@ class MyApp extends StatelessWidget {
               create: (context) => AuthBloc(),
             ),
             BlocProvider(
-              create: (context) =>
-                  AutologinBloc()..add(AutologinEvent.checkToken()),
+              create: (context) => AutologinBloc(),
             ),
           ],
           child: AuthWrapper(),
