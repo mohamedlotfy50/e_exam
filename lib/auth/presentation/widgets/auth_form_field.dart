@@ -29,6 +29,7 @@ class AuthFormField extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
           ),
           child: TextFormField(
+            style: TextStyle(color: Colors.white),
             decoration: InputDecoration(
               prefixIcon: icon,
               hintText: hintText,

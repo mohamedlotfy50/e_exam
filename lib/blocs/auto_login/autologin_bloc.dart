@@ -11,7 +11,7 @@ part 'autologin_state.dart';
 part 'autologin_bloc.freezed.dart';
 
 class AutologinBloc extends Bloc<AutologinEvent, AutologinState> {
-  AuthRepository _authRepository = AuthRepository();
+  // AuthRepository _authRepository = AuthRepository();
 
   AutologinBloc() : super(_Initial());
 
@@ -21,8 +21,8 @@ class AutologinBloc extends Bloc<AutologinEvent, AutologinState> {
   ) async* {
     yield* event.map(
       checkToken: (e) async* {
-        final Option<User> isLogedIn = await _authRepository.getSignedInUser();
-        yield isLogedIn.fold(() => _NotSignedIn(), (user) => _SignedIn(user));
+        // final Option<User> isLogedIn = await _authRepository.getSignedInUser();
+        // yield isLogedIn.fold(() => _NotSignedIn(), (user) => _SignedIn(user));
       },
     );
   }

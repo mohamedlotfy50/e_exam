@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ScreenAdaptive extends StatelessWidget {
   final int _maxMobile = 480;
-  final int _maxTablet = 768;
+  final int _maxTablet = 900;
   final Widget moblie;
   final Widget? tablet;
   final Widget web;
@@ -19,7 +19,8 @@ class ScreenAdaptive extends StatelessWidget {
       builder: (context, constraints) {
         if (constraints.maxWidth <= _maxMobile) {
           return moblie;
-        } else if (constraints.maxWidth <= _maxTablet) {
+        } else if (constraints.maxWidth > _maxMobile &&
+            constraints.maxWidth <= _maxTablet) {
           return tablet ?? moblie;
         } else {
           return web;

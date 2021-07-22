@@ -1,3 +1,6 @@
+import 'package:e_exam/auth/auth_wrapper.dart';
+import 'package:e_exam/prsentation/screens/home/home.dart';
+
 import 'blocs/auto_login/autologin_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -7,7 +10,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'blocs/auth/auth_bloc.dart';
 import 'firbase_wrapper.dart';
-import 'prsentation/screens/auth/auth_wrapper.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -52,6 +54,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white,
           ),
         ),
+        // elevatedButtonTheme: ElevatedButtonTheme.of(context).
       ),
       home: FirebaseWrapper(
         widget: MultiBlocProvider(

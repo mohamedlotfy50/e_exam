@@ -22,7 +22,7 @@ part 'auth_event.dart';
 part 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  final AuthRepository _authRepository = AuthRepository();
+  // final AuthRepository _authRepository = AuthRepository();
   AuthBloc() : super(AuthState.inistial());
 
   @override
@@ -33,7 +33,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       getLevelAndDepartment: (e) async* {
         yield state.copyWith(showLoading: true);
         if (!state.userRole.isAdmin()) {
-          await _authRepository.loadLevelsAndDepartment();
+          // await _authRepository.loadLevelsAndDepartment();
 
           if (state.userRole.isStudent()) {
             // yield state.copyWith(
@@ -43,7 +43,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             //     showLoading: false);
           } else {
             yield state.copyWith(
-                department: _authRepository.getDeprtments(),
+                // department: _authRepository.getDeprtments(),
                 showLoading: false);
           }
         }
@@ -105,12 +105,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           authState: none(),
         );
         if (state.email.isValid() && state.password.isValid()) {
-          final Either<FailureMessage, User> _signin =
-              await _authRepository.signIn(state.email, state.password);
+          // final Either<FailureMessage, User> _signin =
+          // await _authRepository.signIn(state.email, state.password);
           yield state.copyWith(
             isSubmiting: false,
             showErrorMessage: false,
-            authState: some(_signin),
+            authState: none(),
           );
         }
       },
@@ -133,7 +133,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
         if (_user.isValidUser() &&
             state.confirmPassword.isEqual(state.password)) {
-          await _authRepository.requestSignUp(_user);
+          // await _authRepository.requestSignUp(_user);
         }
         yield state.copyWith(
           isSubmiting: false,

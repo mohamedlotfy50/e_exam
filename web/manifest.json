@@ -1,6 +1,6 @@
 {
-    "name": "e_exam",
-    "short_name": "e_exam",
+    "name": "student_management_system",
+    "short_name": "student_management_system",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

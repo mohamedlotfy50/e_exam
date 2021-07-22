@@ -1,4 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class AllUsers extends StatelessWidget {
@@ -13,39 +13,12 @@ class AllUsers extends StatelessWidget {
       appBar: AppBar(
         title: Text('my students'),
       ),
-      body: StreamBuilder<QuerySnapshot>(
-        stream: isAdmin
-            ? FirebaseFirestore.instance
-                .collection('users')
-                .where('uid', isNotEqualTo: uid)
-                .snapshots()
-            : FirebaseFirestore.instance
-                .collection('users')
-                .where(
-                  'user role',
-                  isEqualTo: 'Student',
-                )
-                .where('department', isEqualTo: department)
-                .snapshots(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
-              child: Text('loading'),
-            );
-          }
-          if (snapshot.hasError) {
-            return Center(
-              child: Text('there are no ${isAdmin ? 'users' : 'students'} yet'),
-            );
-          }
-          return ListView.builder(
-            itemCount: snapshot.data!.docs.length,
-            itemBuilder: (context, index) {
-              return ListTile(
-                title: Text(snapshot.data!.docs[index]['name']),
-                subtitle: Text(snapshot.data!.docs[index]['email']),
-              );
-            },
+      body: ListView.builder(
+        itemCount: 0,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(''),
+            subtitle: Text(''),
           );
         },
       ),

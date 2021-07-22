@@ -1,4 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class MyExams extends StatelessWidget {
@@ -15,41 +15,23 @@ class MyExams extends StatelessWidget {
       appBar: AppBar(
         title: Text('my exams'),
       ),
-      body: StreamBuilder<DocumentSnapshot>(
-        stream: FirebaseFirestore.instance
-            .collection('exams')
-            .doc('$level-$department')
-            .snapshots(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
-              child: Text('loading'),
-            );
-          }
-          if (snapshot.hasError) {
-            return Center(
-              child: Text('there are no exams yet'),
-            );
-          }
-          return ListView.builder(
-            itemCount: 1,
-            itemBuilder: (context, index) {
-              return Container(
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(15)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    // Text((snapshot.data.data()['title']).toString()),
-                    // !(snapshot.data.data()['attended'] as List).contains(id)
-                    //     ? ElevatedButton(onPressed: () {}, child: Text('enter'))
-                    //     : ElevatedButton(
-                    //         onPressed: null, child: Text('you have attended'))
-                  ],
-                ),
-              );
-            },
+      body: ListView.builder(
+        itemCount: 1,
+        itemBuilder: (context, index) {
+          return Container(
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.black),
+                borderRadius: BorderRadius.circular(15)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Text((snapshot.data.data()['title']).toString()),
+                // !(snapshot.data.data()['attended'] as List).contains(id)
+                //     ? ElevatedButton(onPressed: () {}, child: Text('enter'))
+                //     : ElevatedButton(
+                //         onPressed: null, child: Text('you have attended'))
+              ],
+            ),
           );
         },
       ),

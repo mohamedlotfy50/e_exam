@@ -25,10 +25,10 @@ dependencies:
     sdk: flutter
   # flutter_localizations:
   #   sdk: flutter
-  cloud_firestore: ^2.4.0
+  # cloud_firestore: ^2.4.0
   dartz: ^0.10.0-nullsafety.2
-  firebase_auth: ^3.0.1
-  firebase_core: ^1.4.0
+  # firebase_auth: ^3.0.1
+  # firebase_core: ^1.4.0
   flutter_bloc: ^7.0.1
   intl: ^0.17.0
   freezed_annotation: ^0.14.2
